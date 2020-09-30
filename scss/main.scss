@@ -55,11 +55,12 @@ $menuItems: 4;
 
 html{
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 body{
   background: $primary-color;
-  overflow-x: hidden;
+  
   height: auto;
 }
 
@@ -75,7 +76,7 @@ main{
   border: 3px solid;
   border-color: $accent-color;
   color: $accent-color;
-  padding: 16px 24px;
+  padding: 12px 16px;
   text-transform: uppercase;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
   display: inline-block;
@@ -151,16 +152,15 @@ input, textarea{
 h2{
   font-family: 'Teko', sans-serif;
   color: $text-color;
-  font-size: 2rem;
-  line-height: 3.6rem;
+  font-size: 2.6rem;
+  line-height: 2.9rem;
   text-transform: uppercase;
 
   .hero-title{
     text-shadow: 1px 2px 3px rgba(0,0,0,0.7);
   }
   
-  
-  
+   
 }
 
 
@@ -473,8 +473,8 @@ footer{
   grid-row: 1;
 
   background-color: $primary-color;
-  padding: 40px;
-  margin: 30px 20px;
+  padding: 20px;
+  
 }
 
 #maquinaria .img{
@@ -628,6 +628,25 @@ footer{
 ////////////////////////////////////////////////////////////////////////
 
 
+//////////////////////// Extra Small: Large Phones
+@media screen and (min-width: 456px){
+
+  h2{
+    font-size: 2.6rem;
+    line-height: 3 rem;
+  }
+
+  .button{
+    padding: 16px 24px;
+  }
+
+  .maquinaria-text{
+  margin: 30px 20px;
+  }
+
+
+
+}
 
 
 
@@ -646,11 +665,6 @@ footer{
   }
 
  
-  h3.secondary-title{
-    //font-size: 2.6rem;
-    //line-height: 3.4rem;
-  }
-  
 /*
   h4.third-title{
     font-size: 1.9rem;
@@ -1085,6 +1099,16 @@ footer{
   .home-text{
     grid-column: 1/7;
     grid-row: 1;
+  }
+
+
+}
+
+
+////SUPER large Devices Styles 
+@media screen and (min-width: 1450px){
+  html{
+    font-size: 20px;
   }
 
 
