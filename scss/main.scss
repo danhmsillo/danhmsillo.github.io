@@ -248,7 +248,7 @@ main #main-container{
   }
   
   footer{
-    background: $darkaccent-color;
+    background: $accent-color;
     width: 100%;
   }
 }
@@ -648,6 +648,7 @@ a.icon{
 //Footer
 footer{
   padding: 30px 20px;
+  background: $darkaccent-color;
 }
 
 
