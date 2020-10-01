@@ -370,23 +370,26 @@ footer{
 //Sección Nosotros
 #nosotros{
   padding: 30px 20px;
+
+  .nosotros-text{
+    grid-column: 1/9;
+    grid-row: 1;
+  }
+  
+  .img{
+    grid-column: 1/9;
+    grid-row: 2;
+  
+    display: flex;
+    align-self: center;
+    max-width: 100%;
+    margin: 30px 0;
+  }
+
 }
 
 
-#nosotros .nosotros-text{
-  grid-column: 1/9;
-  grid-row: 1;
-}
 
-#nosotros .img{
-  grid-column: 1/9;
-  grid-row: 2;
-
-  display: flex;
-  align-self: center;
-  max-width: 100%;
-  margin: 30px;
-}
 
 //Sección Servicios
 
@@ -466,26 +469,29 @@ footer{
 //Sección Maquinaria
 #maquinaria{
   background: $secondary-color;
-}
 
-.maquinaria-text{
-  grid-column: 1/9;
-  grid-row: 1;
-
-  background-color: $primary-color;
-  padding: 20px;
+  .maquinaria-text{
+    grid-column: 1/9;
+    grid-row: 1;
   
+    background-color: $primary-color;
+    padding: 20px;
+    
+  }
+  
+  .img{
+    grid-column: 1/9;
+    grid-row: 2;
+  
+    display: flex;
+    align-self: center;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
 }
 
-#maquinaria .img{
-  grid-column: 1/9;
-  grid-row: 2;
 
-  display: flex;
-  align-self: center;
-  max-width: 100%;
-  margin-bottom: 20px;
-}
 
 //tabla
 

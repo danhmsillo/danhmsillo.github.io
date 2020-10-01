@@ -300,7 +300,7 @@ footer {
   -ms-flex-item-align: center;
       align-self: center;
   max-width: 100%;
-  margin: 30px;
+  margin: 30px 0;
 }
 
 .services-title {
@@ -376,7 +376,7 @@ footer {
   background: #E7EAE9;
 }
 
-.maquinaria-text {
+#maquinaria .maquinaria-text {
   -ms-grid-column: 1;
   -ms-grid-column-span: 8;
   grid-column: 1/9;
