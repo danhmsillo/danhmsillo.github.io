@@ -231,25 +231,29 @@ main #main-container{
 
 
 //Sección Contacto
-#contacto .form{
-  background: $accent-color;
+#contacto{
+  .form{
+    background: $accent-color;
+  }
+  
+  .contact-text{
+    background: $primary-color;
+  }
+  
+  .person-position{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: $accent-font;
+    font-size: 1.2rem;
+  }
+  
+  footer{
+    background: $darkaccent-color;
+    width: 100%;
+  }
 }
 
-#contacto .contact-text{
-  background: $primary-color;
-}
 
-.person-position{
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: $accent-font;
-  font-size: 1.2rem;
-}
-
-footer{
-  background: $darkaccent-color;
-  width: 100%;
-}
 
 
 
@@ -389,6 +393,7 @@ footer{
     margin: 20px 0;
 
     .img-img{
+      position: relative;
       max-width: 100%;
       max-height: 100%;
     }
