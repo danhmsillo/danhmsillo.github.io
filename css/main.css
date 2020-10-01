@@ -155,7 +155,7 @@ main #main-container {
   min-height: 100vh;
 }
 
-section#nosotros {
+#nosotros {
   background: #003D71;
 }
 
@@ -300,8 +300,13 @@ footer {
   display: flex;
   -ms-flex-item-align: center;
       align-self: center;
+  width: 100%;
   max-width: 100%;
   margin: 20px 0;
+}
+
+#nosotros .img .img-img {
+  max-width: 100%;
 }
 
 .services-title {
