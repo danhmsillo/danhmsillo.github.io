@@ -551,7 +551,7 @@ a.icon {
 
 footer {
   padding: 30px 20px;
-  background: #002B50;
+  background-color: #002B50;
 }
 
 @media screen and (min-width: 456px) {
