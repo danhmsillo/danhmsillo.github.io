@@ -60,7 +60,7 @@ html{
 
 body{
   background: $primary-color;
-  
+  overflow-x: hidden;
   height: auto;
 }
 
@@ -385,7 +385,7 @@ footer{
   display: flex;
   align-self: center;
   max-width: 100%;
-  margin: 30px 0 0 0;
+  margin: 30px;
 }
 
 //Sección Servicios
