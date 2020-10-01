@@ -286,6 +286,7 @@ footer {
   grid-column: 1/9;
   -ms-grid-row: 1;
   grid-row: 1;
+  padding: 0px;
 }
 
 #nosotros .img {
