@@ -303,12 +303,15 @@ main #main-container {
   width: 100%;
   max-width: 100%;
   margin: 20px 0;
+  overflow: hidden;
 }
 
 #nosotros .img .img-img {
   position: relative;
-  max-width: 100%;
+  max-width: none;
   max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .services-title {
