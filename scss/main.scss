@@ -395,7 +395,7 @@ main #main-container{
     overflow: hidden;
 
     .img-img{
-      width: 100%;
+      min-width: 100%;
       height: auto;
       object-fit: cover;
     }
