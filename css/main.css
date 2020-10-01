@@ -300,9 +300,9 @@ main #main-container {
   display: flex;
   -ms-flex-item-align: center;
       align-self: center;
-  width: 100%;
   max-width: 100%;
   margin: 20px 0;
+  height: auto;
   overflow: hidden;
 }
 
