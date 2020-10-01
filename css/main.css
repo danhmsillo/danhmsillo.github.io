@@ -307,6 +307,7 @@ footer {
 
 #nosotros .img .img-img {
   max-width: 100%;
+  height: auto;
 }
 
 .services-title {
