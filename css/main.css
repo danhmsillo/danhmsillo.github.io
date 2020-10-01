@@ -307,9 +307,8 @@ main #main-container {
 }
 
 #nosotros .img .img-img {
-  position: relative;
-  max-width: none;
-  max-height: 100%;
+  max-width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
