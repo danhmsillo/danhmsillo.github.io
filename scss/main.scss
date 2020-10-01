@@ -447,6 +447,13 @@ main #main-container{
     height: auto;
     display: block;
   }
+
+  .fill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+  }
   
 }
 
