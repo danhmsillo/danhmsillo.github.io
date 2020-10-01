@@ -298,8 +298,6 @@ main #main-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
   width: 100%;
   margin: 20px 0;
   height: auto;
@@ -311,6 +309,9 @@ main #main-container {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .services-title {
