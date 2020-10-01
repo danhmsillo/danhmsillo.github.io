@@ -247,11 +247,13 @@ main #main-container{
     font-size: 1.2rem;
   }
   
-  footer{
-    background: $accent-color;
-    width: 100%;
-  }
 }
+
+footer{
+  background: $accent-color;
+  width: 100%;
+}
+
 
 
 
@@ -648,7 +650,6 @@ a.icon{
 //Footer
 footer{
   padding: 30px 20px;
-  background-color: $darkaccent-color;
 }
 
 

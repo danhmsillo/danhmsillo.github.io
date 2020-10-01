@@ -178,7 +178,7 @@ main #main-container {
   font-size: 1.2rem;
 }
 
-#contacto footer {
+footer {
   background: #003D71;
   width: 100%;
 }
@@ -551,7 +551,6 @@ a.icon {
 
 footer {
   padding: 30px 20px;
-  background-color: #002B50;
 }
 
 @media screen and (min-width: 456px) {
