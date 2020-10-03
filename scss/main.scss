@@ -37,8 +37,11 @@ $accent-font: 'Teko', sans-serif;
 $base-font: 'Rubik', sans-serif;
 
 
+
+
+
 $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
-$menuItems: 4;
+$menuItems: 7;
 
 
 
@@ -91,7 +94,7 @@ main{
 }
 
 .button.white{
-  background-color: none;
+  background-color: $accent-color;
   border: 3px solid;
   border-color: $primary-color;
   color: $primary-color;
@@ -258,8 +261,33 @@ footer{
 
 
 
+//SVG Lines
+.lines{
+  position: absolute;
+  margin-top: 40vh;
+  opacity: 0.5;
+}
 
+.lines1{
+  z-index: 15;
+}
 
+.lines2{
+  z-index: 35;
+}
+
+.lines3{
+  z-index: 35;
+  margin-top: 20vh;
+}
+
+.lines4{
+  z-index: 15;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+//End SVG
 
 
 ///////////////////////////////////////// MEDIA QUERIES
@@ -274,10 +302,151 @@ footer{
 }
 
 .container{
-  max-width: calc(100% - 60px);
-
-  
+  max-width: calc(100% - 60px); 
 }
+
+//
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: $accent-color;
+  overflow: hidden;
+  transition: all 0.5s ease-out, background 1s ease-out;
+  transition-delay: 0.2s;
+  z-index: 1050;
+
+  .burger-container {
+    position: fixed;
+    display: block;
+    //position: relative;
+    //display: inline-block;
+    right: 0px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    
+    transform: rotate(0deg);
+    transition: all 0.3s $cubic;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    #burger {
+      width: 18px;
+      height: 8px;
+      position: relative;
+      display: block;
+      margin: -4px auto 0;
+      top: 50%;
+      
+
+      .bar {
+        width: 100%;
+        height: 1px;
+        display: block;
+        position: relative;
+        background: #FFF;
+        transition: all 0.3s $cubic;
+        transition-delay: 0s;
+        &.topBar {
+          transform: translateY(0px) rotate(0deg);
+        }
+        &.btmBar {
+          transform: translateY(6px) rotate(0deg);
+        }
+      }
+    }
+  }
+
+    
+
+    ul.menu {
+      //position: relative;
+      display: block;
+      padding: 80px 48px 0;
+      list-style: none;
+      text-align: center;
+      
+      li.menu-item {
+        border-bottom: 1px solid $lightaccent-color;
+        margin-top: 5px;
+        transform: scale(1.15) translateY(-30px) translateX(30px);
+        opacity: 0;
+        transition: transform 0.5s $cubic, opacity 0.6s $cubic;
+        @for $i from 1 through $menuItems {
+          &:nth-child(#{$i}) {
+            transition-delay: #{0.56 - ($i * 0.07)}s;
+          }
+        }
+
+        a {
+          display: block;
+          position: relative;
+          color: $primary-color;
+          font-family: $base-font;
+          font-weight: 100;
+          text-decoration: none;
+          font-size: 22px;
+          line-height: 2.35;
+          font-weight: 200;
+          width: 100%;
+
+          &:hover{
+            color: $accent-color;
+          }
+        }
+      }
+    }
+
+
+    &.menu-opened {
+      height: 100%;
+      background-color: $darkaccent-color;
+      transition: all 0.3s ease-in, background 0.5s ease-in;
+      transition-delay: 0.25s;
+
+      .burger-container {
+        transform: rotate(90deg);
+        
+        #burger {
+          .bar {
+            transition: all 0.4s $cubic;
+            transition-delay: 0.2s;
+            &.topBar {
+              transform: translateY(4px) rotate(45deg);
+            }
+            &.btmBar {
+              transform: translateY(3px) rotate(-45deg);
+            }
+          }
+        }
+      }
+
+      ul.menu {
+        li.menu-item {
+          transform: scale(1) translateY(0px);
+          opacity: 1;
+          @for $i from 1 through $menuItems {
+            &:nth-child(#{$i}) {
+              transition-delay: #{0.07 * $i+0.2}s;
+            }
+          }
+        }
+      }  
+    }
+}
+
+
+//
+
+
+
+
+
 
 
 
@@ -376,6 +545,8 @@ footer{
 //Sección Nosotros
 #nosotros{
   padding: 30px 20px;
+  position: relative;
+  z-index: 30;
 
   .nosotros-text{
     grid-column: 1/9;
@@ -415,13 +586,17 @@ footer{
 //Sección Servicios
 
 
-.services-title{
-  padding: 30px 20px 0 20px;
-}
+
 
 
 
 #servicios {
+
+  .services-title{
+    position: relative;
+    padding: 30px 20px 0 20px;
+    z-index: 40;
+  }
 
   .services-item{
     grid-column: 1/9;
@@ -483,6 +658,8 @@ footer{
     align-self: center;
     max-width: 100%;
     margin: 20px 0;
+
+    z-index: 40;
   }
 
 
@@ -491,72 +668,6 @@ footer{
 
 
 
-
-
-
-//Sección Maquinaria
-#maquinaria{
-  background: $secondary-color;
-
-  .maquinaria-text{
-    grid-column: 1/9;
-    grid-row: 1;
-  
-    background-color: $primary-color;
-    padding: 20px;
-    
-  }
-  
-  .img{
-    grid-column: 1/9;
-    grid-row: 2;
-  
-    display: flex;
-    align-self: center;
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-}
-
-
-
-//tabla
-
-.maquinaria-text2{
-  background-color: $primary-color;
-  padding: 40px;
-  flex-grow: 1;
-  grid-column: 1/9;
-}
-
-.maq-lista__table{
-  margin-top: 2.4rem;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.maq-lista__table th,
-.maq-lista__table td{
-  padding: 0.4rem;
-  
-}
-
-.maq-lista__table th{
-  font-family: $base-font;
-  font-size: 0.9rem;
-  color: $accent-color;
-  text-transform: uppercase;
-  border-bottom: 2px solid $accent-color;
-  text-align: left;
-}
-.maq-lista__table tr{
-  font-family: $base-font;
-  font-size: 0.8rem;
-  border-bottom: 1px solid $text-color;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-}
 
 
 
@@ -564,6 +675,11 @@ footer{
 //Contact Reminder
 #contact-reminder{
   padding: 60px 20px;
+
+  .reminderwrapper{
+    position: relative;
+    z-index: 40;
+  }
 }
 
 
@@ -575,8 +691,10 @@ footer{
   grid-column: 1/9;
   grid-row: 1;
 
-  
   max-width: 80%;
+
+  position: relative;
+  z-index: 20;
 
 }
 
@@ -595,6 +713,9 @@ footer{
   max-width: 400px;
   margin: 30px auto;
   text-align: center;
+  
+  position: relative;
+  z-index: 20;
 }
 
 #contacto input, #contacto textarea{
@@ -617,6 +738,7 @@ footer{
 .social{
   display: flex;
   align-items: center;
+  z-index: 20;
 }
   
 
@@ -674,12 +796,7 @@ footer{
     padding: 16px 24px;
   }
 
-  .maquinaria-text{
-  margin: 30px 20px;
-  }
-
-
-
+  
 }
 
 
@@ -805,14 +922,7 @@ footer{
     padding: 80px 48px;
   }
 
-  //SMALL Seccion Maquinaria
-
-  #maquinaria{
-    
-    .maquinaria-text{
-      padding: 80px 48px;
-    }
-  }
+  
 
   //SMALL Seccion Contacto
   #contacto{
@@ -847,6 +957,38 @@ footer{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
+
+
+  //SVG lines
+  .lines{
+    width: 100%;
+    margin-top: 40vh;
+ 
+  }
+  
+  .lines1{
+    z-index: 15;
+  }
+  
+  .lines2{
+    z-index: 35;
+  }
+  
+  .lines3{
+    z-index: 35;
+    margin-top: 20vh;
+  }
+  
+  .lines4{
+    z-index: 15;
+    margin-top: 5vh;
+    //margin-bottom: 0;
+  }
+  //End SVG Lines
+
+
+
+
 
   //Home Section
   /*
@@ -988,24 +1130,7 @@ footer{
   //MEDIUM Proyecto Destacado
  
 
-  //MEDIUM Maquinaria
-  #maquinaria{
-    padding: 80px 0;
-    .img{
-      grid-column: 1/8;
-      grid-row: 1;
-
-      display: flex;
-      align-self: flex-start;
-    }
-
-    .maquinaria-text{
-      grid-column: 5/12;
-      grid-row: 1;
-      
-      margin-top: 100px;
-    }
-  }
+  
 
   //MEDIUM Proyecto Destacado
 
