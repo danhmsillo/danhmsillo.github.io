@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
   $empresa = $_POST['Empresa'];
   $mensaje = $_POST['Mensaje'];
 
-  $correoA = "danielahermosillohdz@gmail.com";
+  $correoA = "prueba@legalizarlacorrupcion.com.mx";
   $headers = "Mensaje de: ".$correoDe;
   $txt = "Has recibido un mensaje de ".$nombre.".\n\n"$mensaje;
 
