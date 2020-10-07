@@ -37,9 +37,6 @@ $accent-font: 'Teko', sans-serif;
 $base-font: 'Rubik', sans-serif;
 
 
-
-
-
 $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
 
@@ -361,7 +358,7 @@ header{
     background-color: $darkaccent-color;
     
     transform: rotate(0deg);
-    transition: all 0.3s $cubic;
+    transition: all 0.3s ease;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 
@@ -380,7 +377,7 @@ header{
         display: block;
         position: relative;
         background: #FFF;
-        transition: all 0.3s $cubic;
+        transition: all 0.3s ease;
         transition-delay: 0s;
         &.topBar {
           transform: translateY(0px) rotate(0deg);
@@ -406,8 +403,12 @@ header{
         margin-top: 5px;
         transform: scale(1.15) translateY(-30px) translateX(30px);
         opacity: 0;
-        transition: transform 0.5s $cubic, opacity 0.6s $cubic;
-        
+        transition: transform 0.5s ease, opacity 0.6s ease;
+        @for $i from 1 through $menuItems {
+          &:nth-child(#{$i}) {
+            transition-delay: #{0.56 - ($i * 0.07)}s;
+          }
+        }
 
         a {
           display: block;
@@ -441,7 +442,7 @@ header{
         
         #burger {
           .bar {
-            transition: all 0.4s $cubic;
+            transition: all 0.4s ease;
             transition-delay: 0.2s;
             &.topBar {
               transform: translateY(4px) rotate(45deg);
@@ -457,11 +458,16 @@ header{
         li.menu-item {
           transform: scale(1) translateY(0px);
           opacity: 1;
-         
+          @for $i from 1 through $menuItems {
+            &:nth-child(#{$i}) {
+              transition-delay: #{0.07 * $i+0.2}s;
+            }
+          }
         }
       }  
     }
 }
+
 
 
 //

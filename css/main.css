@@ -278,8 +278,8 @@ header {
   background-color: #002B50;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -302,8 +302,8 @@ header {
   display: block;
   position: relative;
   background: #FFF;
-  -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
@@ -331,10 +331,10 @@ header {
   -webkit-transform: scale(1.15) translateY(-30px) translateX(30px);
           transform: scale(1.15) translateY(-30px) translateX(30px);
   opacity: 0;
-  -webkit-transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-transition: opacity 0.6s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.6s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.6s ease;
+  transition: transform 0.5s ease, opacity 0.6s ease, -webkit-transform 0.5s ease;
 }
 
 .header ul.menu li.menu-item a {
@@ -357,8 +357,8 @@ header {
 .header.menu-opened {
   height: 100%;
   background-color: #002B50;
-  -webkit-transition: all 0.3s ease-in, background 0.5s ease-in;
-  transition: all 0.3s ease-in, background 0.5s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   -webkit-transition-delay: 0.25s;
           transition-delay: 0.25s;
   z-index: 2050;
@@ -370,8 +370,8 @@ header {
 }
 
 .header.menu-opened .burger-container #burger .bar {
-  -webkit-transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
@@ -759,6 +759,10 @@ footer {
   header .header .burger-container {
     height: 90px;
     width: 90px;
+  }
+  header .header .menu-opened {
+    -webkit-transition: background 0.5s ease-in;
+    transition: background 0.5s ease-in;
   }
   .hero {
     padding: 0 48px;
