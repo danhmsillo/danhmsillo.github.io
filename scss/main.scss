@@ -2,9 +2,6 @@
 @import 'normalize';
 
 //Reset
-li{
-  list-style-type: none;
-}
 
 body,p,a,ul,li{
   text-decoration: none;
@@ -37,7 +34,8 @@ $accent-font: 'Teko', sans-serif;
 $base-font: 'Rubik', sans-serif;
 
 
-$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
+$menuItems: 4;
 
 
 
@@ -81,7 +79,7 @@ main{
   box-shadow: 1px 1px 8px hsla(0,0%,84.7%,.7);
   display: inline-block;
   margin: 20px 0 0 0;
-  transition: background 400ms $cubic;
+  transition: background 400ms ease;
   margin-right: 10px;
 
 
@@ -95,14 +93,10 @@ main{
   border: 3px solid;
   border-color: $primary-color;
   color: $primary-color;
-  transition: background-color 400ms $cubic;
-
-  
+  transition: background-color 400ms ease;
 
   &:hover{
     background-color: $lightaccent-color;
-   
-    
   }
 }
 
@@ -110,7 +104,7 @@ main{
   background: $accent-color;
   border-color: $accent-color;
   color: $primary-color;
-  transition: background 400ms $cubic;
+  transition: background 400ms ease;
 
   &:hover{
     background: $darkaccent-color;
@@ -120,7 +114,7 @@ main{
 }
 
 
-  
+  /*
 input, textarea{
   background: $accent-color;
   border: none;
@@ -128,6 +122,45 @@ input, textarea{
   padding: 10px 16px;
   color: $primary-color;
 }
+*/
+
+//FORM
+
+label{
+  display: block;
+  font-family: $base-font;
+  color: $primary-color;
+  font-size: 1rem;
+}
+
+#info{
+  font-family: $base-font;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.label_style{
+  font-family: $base-font;
+  color: $primary-color;
+  font-size: 1rem;
+}
+
+input, select, textarea {
+  background-color: rgba($color: #02070F, $alpha: 0.1);
+  border: 1px solid $lightaccent-color;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  font-family: $base-font;
+  width: 500px;
+  padding: 10px;
+}
+
+textarea {
+  height: 80px;
+}
+
+
+//End FORM
 
 
 // Text & Fonts
@@ -286,6 +319,58 @@ footer{
 
 //End SVG
 
+//LOADER
+.loader-wrapper{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $darkaccent-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@mixin loaderDivMixin {
+	border-radius: 50%;
+	padding: 8px;
+	border: 2px solid transparent;
+	animation: rotate linear 3.5s infinite;
+}
+
+.loader {
+	position: relative;
+	margin: 75px auto;
+	width: 150px;
+	height: 150px;
+	display: block;
+	overflow: hidden;
+	div {
+		height: 100%;
+	}
+}
+
+/* loader */
+.loader1, .loader1 div {
+	@include loaderDivMixin;
+	border-top-color: $secondary-color;
+	border-bottom-color: $lightaccent-color;
+}
+//End LOADER
 
 ///////////////////////////////////////// MEDIA QUERIES
 
@@ -304,6 +389,7 @@ footer{
 
 //
 
+
 header{
   width: 100%; 
   height: 100%;
@@ -320,6 +406,7 @@ header{
   background: $primary-color;
   overflow: hidden;
   z-index: 2055;
+  
 
   img{
     margin: 5px 20px;
@@ -327,8 +414,54 @@ header{
     height: 70px;
     justify-content: flex-start;
     align-self: center;
+    transition: all 0.5s ease-out;
+    transition-delay: 0.2s;
   }
 }
+
+.lang-nav{
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 90px;
+  background-color: $primary-color;
+  border-left: solid 1px $accent-color;
+  height: 80px;
+  width: auto;
+  padding: 0 16px;
+  overflow: hidden;
+  z-index: 2070;
+  align-items: center;
+  transition: all 0.5s ease-out, background 1s ease-out;
+  transition-delay: 0.2s;
+
+  .lang-nav__item{
+    display: inline-block;
+    
+    .lang-nav__link{
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      transition: all .3s ease;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: $base-font;
+      font-size: 1rem;
+      line-height: 1rem;
+      color: $lightaccent-color;
+      padding:.4rem .5rem;
+
+      &:hover{
+        color: $darkaccent-color;
+      }
+    }
+
+    .is-active{
+      color: $darkaccent-color;
+    }
+  }
+}
+
 
 
 
@@ -358,7 +491,8 @@ header{
     background-color: $darkaccent-color;
     
     transform: rotate(0deg);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+    transition-delay: 0.2s;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 
@@ -604,14 +738,27 @@ header{
 
 
 #servicios {
-
   .services-title{
-    position: relative;
-    padding: 30px 20px 0 20px;
-    z-index: 40;
+    grid-column: 1/9;
+    grid-row: 1;
 
-    grid-column: 1/10;
+    padding: 30px 20px 0 20px;
+
+    z-index: 45;
   }
+
+  .img_{
+    grid-column: 1/9;
+    grid-row: 2;
+  
+    display: flex;
+    align-self: center;
+    max-width: 100%;
+    margin: 20px 20px;
+
+    z-index: 40;
+  }
+
 
   .services-item{
     grid-column: 1/9;
@@ -657,8 +804,57 @@ header{
   
 }
 
+//Sección Maquinaria
 
 
+#maquinaria{
+  background: $primary-color;
+}
+
+.maquinaria-text{
+  grid-column: 1/9;
+  grid-row: 1;
+
+  background-color: $accent-color;
+  padding: 40px;
+  margin: 30px 20px;
+}
+
+#maquinaria .img{
+  grid-column: 1/9;
+  grid-row: 2;
+
+  display: flex;
+  align-self: center;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+//lista automatizacion
+ul.auto__lista{
+  margin-top: 2.4rem;
+  width: 100%;
+
+    li{
+      list-style: none;
+      font-family: $accent-font;
+      font-size: 1.2rem;
+      border-bottom: 1px solid $lightaccent-color;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      color: $primary-color;
+    }
+
+  ::before{
+    list-style: none;
+    content: "\2022";
+    color: $lightaccent-color;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+  }
+}
 
 
 //Sección proyecto Destacado
@@ -699,7 +895,6 @@ header{
 #contact-reminder{
   padding: 60px 20px;
 
-
   .reminderwrapper{
     position: relative;
     z-index: 40;
@@ -739,8 +934,8 @@ header{
 #contacto form{
   width: 80%;
   max-width: 400px;
-  margin: 30px auto;
-  text-align: center;
+  margin: 80px auto;
+  
   
   position: relative;
   z-index: 20;
@@ -767,6 +962,7 @@ header{
   display: flex;
   align-items: center;
   z-index: 20;
+  list-style-type: none;
 }
   
 
@@ -784,7 +980,7 @@ header{
   position: relative;
 
   font-size: 1.5rem;
-  transition: background 500ms $cubic;
+  transition: background 500ms ease;
 
   &:hover{
     background: $lightaccent-color;
@@ -911,6 +1107,10 @@ footer{
       }
     }
 
+    .lang-nav{
+      height: 90px;
+    }
+
     .header{
       height: 90px;
 
@@ -935,7 +1135,11 @@ footer{
   #servicios{
     
     .services-title{
-      padding: 80px 48px;
+      padding: 80px 48px 10px;
+    }
+
+    .img_{
+      margin: 0 48px 40px;
     }
 
     .services-text-left, .services-text-right{
@@ -961,9 +1165,19 @@ footer{
     }
   }
 
+  //SMALL Seccion Maquinaria
+
+  #maquinaria{
+    
+    .maquinaria-text{
+      padding: 80px 48px;
+      margin: 30px 48px;
+    }
+  }
 
   //SMALL Contact Reminder
   #contact-reminder{
+    padding: 60px 0px;
 
     .reminderwrapper{
       padding: 0px 48px;
@@ -1125,7 +1339,23 @@ footer{
 
   //MEDIUM Seccion Servicios
   #servicios{
+    .services-title{
+      grid-column: 1/10;
+      grid-row: 1;
+    }
+  
+    .img_{
+      grid-column: 7/13;
+      grid-row: 1;
     
+      width: 100%;
+      margin: 100px 0;
+
+      .img{
+        width: 100%;
+      }
+    }
+
     .services-text-left{
       grid-column: 1/7;
       grid-row: 1;
@@ -1174,11 +1404,28 @@ footer{
 
   }
 
+  //MEDIUM Maquinaria
+  #maquinaria{
+    padding: 80px 0;
+
+    .img{
+      grid-column: 2/8;
+      grid-row: 1;
+
+      display: flex;
+      align-self: flex-start;
+    }
+
+    .maquinaria-text{
+      grid-column: 5/12;
+      grid-row: 1;
+      
+      margin: 100px 0px;
+    }
+  }
+
   //MEDIUM Contact Reminder
   
-
-  //MEDIUM Proyecto Destacado
- 
 
   
 
@@ -1210,6 +1457,14 @@ footer{
     .form{
       grid-column: 7/13;
       grid-row: 1;
+    }
+
+    label{
+      margin-top: 12px;
+    }
+
+    textarea{
+      height: 200px;
     }
   }
 
@@ -1275,6 +1530,7 @@ footer{
     grid-row: 1;
   }
 
+
   #proyecto-destacado{
     .proyecto-destacado-text{
       grid-column: 1/10;
@@ -1288,6 +1544,12 @@ footer{
     .img{
       grid-column: 7/13;
       grid-row: 1;
+    }
+  }
+
+  #maquinaria{
+    .maquinaria-text{
+      padding: 100px 80px;
     }
   }
 
@@ -1325,14 +1587,54 @@ footer{
   }
 
   //Home Section
-  .home-text{
-    grid-column: 1/7;
-    grid-row: 1;
+  #home_{
+
+    .hero{
+      padding: 0;
+    }
+
+    .home-text{
+      grid-column: 1/7;
+      grid-row: 1;
+    }
   }
+
+  #servicios{
+    .services-title{
+      padding: 80px 0px 10px;
+    }
+  }
+
+  #maquinaria{
+    .maquinaria-text{
+      padding: 120px 100px;
+    }
+  }
+
+  #contact-reminder{
+    .reminderwrapper{
+      padding: 0;
+    }
+  }
+
+  #proyecto-destacado{
+    padding: 80px 0;
+  }
+
+  #contacto{
+    .contact-text{
+      padding: 80px 0;
+    }
+
+  }
+
+  
 
 
 }
 
+
+/////////////////////////////////////////////////////////////////
 
 ////SUPER large Devices Styles 
 @media screen and (min-width: 1450px){
