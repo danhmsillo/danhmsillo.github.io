@@ -1,0 +1,115 @@
+
+/* Import Sanatize to reset browser defaults - Short URL(http://srt.lt/Q6P0nY) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css');
+
+
+.wrappie {
+	font-size: 16px; /* Our base font-size */
+	line-height: 1.75; /* Line height assumes an almost rem value but is dynamic to the font-size */
+	font-weight: 300; /* Use the included weight */
+	color: #332F21; /* Don't use black it's too harsh */
+	display: flex; /* Set body to be a flex container */
+	align-items: center; /* Vertically centre content in the viewport */
+	justify-content: center; /* Horizontally centre content in the viewport */
+	min-height: 80vh; /* Force vertical centering since the content won't always be taller than the viewport */
+	padding: 2rem; /* Using rem values as they don't cascade like em units and are not fixed units like pixels */
+  /* 
+	background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random'); /* Multiple Background images, semi-transparent gradient used as a fallback for Edge */
+  /* 
+	background-position: center center;
+	background-size: cover;
+  */
+}
+
+
+.card_ {
+	display: flex; /* Sets entrire card element to be a flex container */
+	flex-direction: column; /* Forces elements to align along the vertical axis */
+
+	max-width: 102rem; /* Base-spacing-unit multiplied 35 */
+	min-height: 75vh; /* Always at least 75% of the viewport */
+
+	background-color: $neutral6; /* Set background colour of our content card */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle drop shadow */
+}
+
+	.card__image-container {
+		max-height: 10rem; /* Stop the image getting too big */
+
+		background-image: url('https://source.unsplash.com/random');
+		background-size: cover; /* Force the background image to cover the container */
+		background-position: center center; /* Position the image in the middle */
+	}
+
+	.card__image {
+		opacity: 0; /* Hide the image in the page, we need the DOM to render it so we have two elements with content in the card */
+		pointer-events: none; /* Allows for the image to be clicked through */
+	}
+
+	.card__contents {
+		display: flex; /* Make element a flex container */
+		flex-direction: column; /* Align elements along the vertical axis */
+
+		padding: 6rem 4rem;
+	}
+
+	.card__header,
+	.card__footer {
+		flex: 0 0 auto; /* Don't grow, don't shrink, automatic size (basis) */
+	}
+
+	.card__footer {
+		margin-top: 2rem; /* Create a bit of space between the content and the footer */
+		text-align: right; /* Align the contents of the footer to the right */
+	}
+
+	.card__body {
+		flex: 1 1 auto; /* Same as flex:1; */
+	}
+
+	/* The flex properties of the card header, footer and body allows the footer to always be at the bottom of the container */
+
+	.card__title {
+		margin-top: 0; /* Remove margin as there are no elements above it */
+    color: white;
+    margin-bottom: 3rem;
+	}
+
+  .card__p{
+    color: $neutral2;
+    font-family: $base-font;
+  }
+
+  .card__list{
+    padding: 3rem 0;
+  }
+
+  .card__list-item{
+    color: white;
+    font-family: $accent-font;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    padding: 1rem 0;
+  }
+
+  
+
+@media only screen and (min-width: 53rem) { /* Base-spacing-unit * 30 */
+
+	.card_ {
+		flex-direction: row; /* Align items along the horizontal axis */
+		min-height: 60vh;
+	}
+
+		.card__image-container {
+			flex: 0 1 45%; /* Don't grow, do shrink, 45% width (basis) */
+			max-height: inherit; /* Reset the max-height set for mobile */
+		}
+
+		.card__contents {
+			flex: 1 1 55%; /* Grow, Shrink, 55% width */
+			padding: 6rem; /* Increase padding now we have more space to play with */
+		}
+
+}
