@@ -28,16 +28,16 @@ clear: both;
 }
 
 .animBlock[data-position="up"].viewed {
-h2,h4,h6{
-  @include prefixonprop(transform, translateY(0));
-  @include prefixonprop(transition, transform cubic-bezier(.25,.1, 0,1));
-  &:after{
-     @include prefixonprop(transform, scaleY(0));
+  h2,h4,h6{
+    @include prefixonprop(transform, translateY(0));
+    @include prefixonprop(transition, transform cubic-bezier(.25,.1, 0,1));
+    &:after{
+      @include prefixonprop(transform, scaleY(0));
+    }
   }
-}
-h6{
-  transition-duration: 1.2s;
-}
+  h6{
+    transition-duration: 1.2s;
+  }
 }
 
 .mask-fadein.animBlock[data-position="in"],
@@ -542,25 +542,35 @@ opacity: 1;
       }
       */
     }
-  }
-  
-  
+  } 
 }
 
-/*
+
+/***************
+****************
+****************
+  BREAKPOINTS
+****************
+****************
+****************
+****************/
+
+
+
 @media only screen and (max-width : 640px) {
+
   .main-content{
     #about{
       .container{
         .mask{
-          height: 2vw;
+          height: 3vw;
         }
       }
     }
     #certifications{
       .container{
         .mask{
-          height: 2vw;
+          height: 6vw;
           margin-bottom: 6%;
         }
       }
@@ -568,7 +578,7 @@ opacity: 1;
     #stats{
       .container{
         .mask{
-          height: 2vw;
+          height: 6vw;
           margin-bottom: 6%;
         }
       }
@@ -577,15 +587,49 @@ opacity: 1;
       .front-industries{
         .container{
           .mask{
-            height: 2vw;
+            height: 6vw;
             margin-bottom: 6%;
           }
         }
       }
     }
+    #projects{
+      .container{
+        .mask{
+          height: 6vw;
+          margin-bottom: 6%;
+        }
+      }
+    }
+    #machinery{
+      .container{
+        .mask{
+          height: 6vw;
+          margin-bottom: 6%;
+        }
+      }
+    }
+    #contact_cta{
+      .container{
+        .mask{
+          margin-bottom: 6%;
+        }
+      }
+    }
   }
 }
-*/
+
+
+/***************
+****************
+****************
+  PAGES STYLES
+****************
+****************
+****************
+****************/
+
+
 
 /***************
     NOSOTROS ABOUT
@@ -912,6 +956,19 @@ opacity: 1;
       }
     }
   }
+
+
+  @media only screen and (max-width : 640px) {
+    .see-projects_cta{
+      .container{
+        .mask{
+          height: 6vw;
+          margin-bottom: 6%;
+        }
+      }
+    }
+  }
+  
 
 
   

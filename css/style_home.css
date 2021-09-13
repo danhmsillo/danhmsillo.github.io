@@ -295,7 +295,7 @@ h2 {
 
 h6 {
   font-family: "MonumentExtended", sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   position: relative;
   font-weight: 800;
   font-style: normal;
@@ -914,89 +914,97 @@ a:focus, a:hover {
 /***************
      FOOTER 
 ****************/
-#footer {
-  margin: 0 auto;
-  width: 100%;
-  display: block;
-  background-color: #090A0B;
-  position: absolute;
-  bottom: 0;
-}
-
-#footer .container {
-  padding: 4% 50px 6%;
-  max-width: 100%;
-}
-
-#footer .container:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-#footer .container .column_container {
-  /*
-          .social{
+/*
+#footer{
+    @include block;
+    background-color: $neutral6;
+    //position: absolute;
+    bottom: 0;
+    .container{
+        padding: 4% 50px 6%;
+        max-width: 100%;
+        &:after{
+            @include clear_fix;
+        }
+        .column_container{
+          .logo{
+            //float: left;
+            display:inline-block;
+            margin:10px auto
           }
-          */
-}
-
-#footer .container .column_container .logo {
-  display: inline-block;
-  margin: 10px auto;
-}
-
-#footer .container .column_container .adress p {
-  font-family: "Archivo", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.65;
-  color: #DEE2E6;
-}
-
-#footer .container .column_container .location-link {
-  display: block;
-  font-size: 1rem;
-  letter-spacing: 0;
-  margin: 28px auto 0;
-  text-decoration: none;
-}
-
-#footer .container .column_container .location-link a {
-  font-size: 1rem;
-  color: #1a1b25;
-  display: inline-block;
-  padding-left: 21px;
-  position: relative;
-}
-
-#footer .container .column_container .location-link a:before {
-  background: transparent url(../img/placeholder.svg) no-repeat 50%/9px 12px;
-  content: "";
-  margin: auto 0;
-  width: 9px;
-  height: 12px;
-  opacity: .32;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  -webkit-transition: opacity 0.15s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: opacity 0.15s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-#footer .container .column_container .nav-footer #footer-menu .footer-menu-item a {
-  font-family: "MonumentExtended", sans-serif;
-  font-size: 1.2rem;
-  color: #6C757D;
-  text-transform: uppercase;
-  -webkit-transition: 0.15s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: 0.15s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-#footer .container .column_container .nav-footer #footer-menu .footer-menu-item a:hover {
-  color: rgba(220, 55, 4, 0.76);
-}
-
+          
+          .footer__contact-info{
+            p{
+            font-family: $base-font;
+            font-size: 1.4rem;
+            line-height: 1.2;
+            color: $neutral3;
+            margin-bottom: 1.4rem;
+            }
+          }
+          .location-link{
+            display:block;
+            letter-spacing:0;
+            margin:28px auto 0;
+            text-decoration:none;
+            a{
+              font-size: 1rem;
+              color: $neutral3 ;
+              display:inline-block;
+              padding-left:21px;
+              position:relative;
+              font-family: $accent-font;
+              text-transform: uppercase;
+              font-weight: normal;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.7;
+              letter-spacing: 2px;
+              &:before{
+                background:transparent url(/img/placeholder.svg) no-repeat 50%/9px 12px;
+                content:"";
+                color: blue;
+                margin:auto 0;
+                width:20px;
+                height:30px;
+                opacity: 1;
+                top:0;
+                bottom:0;
+                left:0;
+                position:absolute;
+                transition:opacity .15s cubic-bezier(.77,0,.175,1)
+              }
+              &:hover{
+                color: $accent-color-shade3;
+              }
+            }
+          }
+          .nav-footer{
+            #footer-menu{
+              padding: 8rem 6rem;
+              .footer-menu-item{
+                a{
+                  font-family: $accent-font;
+                  font-size: 1.2rem;
+                  color: $neutral3;
+                  text-transform: uppercase;
+                  transition:.15s cubic-bezier(.77,0,.175,1);
+                  &:hover{
+                    color: $accent-color-shade3;
+                  }
+                  
+                }
+              }
+            }
+          }
+          .social{
+            margin-top: 7.75rem;
+          }
+        }
+      }    
+    }
+  
+    */
 /*************** END FOOTER ****************/
 @media only screen and (max-width: 1440px) {
   #wrapper_header #header .container .logo.logo-iso {
@@ -1038,16 +1046,26 @@ a:focus, a:hover {
   #wrapper_header #header.fixed .container .logo img {
     width: 90px;
   }
-  .footer .container > div {
-    width: 420px;
-  }
-  .footer .container > div p {
-    font-size: 14px;
-    margin-right: 48px;
-  }
-  .footer .container > div .social li a {
-    font-size: 17px;
-  }
+  /*
+    .footer{
+        .container{
+            > div{
+                width: 420px;
+                p{
+                    font-size: 14px;
+                    margin-right: 48px;
+                }
+                .social{
+                    li{
+                        a{
+                            font-size: 17px;                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+    */
 }
 
 @media only screen and (max-width: 768px) {
@@ -1072,13 +1090,23 @@ a:focus, a:hover {
     padding-left: 24px !important;
     padding-right: 24px !important;
   }
-  .footer .container > p {
-    font-size: 14px !important;
-    margin-right: 48px;
-  }
-  .footer .container .social li a {
-    font-size: 17px;
-  }
+  /*
+    .footer{
+        .container{
+            >p{
+                font-size: 14px!important;
+                margin-right: 48px;
+            }
+            .social{
+                li{
+                    a{
+                        font-size: 17px;                        
+                    }
+                }
+            }
+        }
+    }
+    */
 }
 
 @media only screen and (max-width: 640px) {
@@ -1093,23 +1121,27 @@ a:focus, a:hover {
     line-height: 1.3;
     letter-spacing: -1.5px;
   }
-  .footer .container {
-    text-align: center;
-    padding-bottom: 64px;
-  }
-  .footer .container > p {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 19px;
-    font-size: 14px;
-    float: none;
-  }
-  .footer .container .social {
-    margin-top: 24px;
-    display: inline-block;
-    float: none;
-  }
+  /*
+    .footer{
+        .container{
+            text-align: center;
+            padding-bottom: 64px;
+            >p{
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 19px;
+                font-size: 14px;
+                float: none;
+            }
+            .social{
+                margin-top: 24px;
+                display: inline-block;
+                float: none;
+            }
+        }
+    }
+    */
   /*****NOSOTROS ABOUT*****/
   #about-page .main-content #wrapper-hero #about-hero .hero-title {
     font-size: 10px;
@@ -1369,14 +1401,6 @@ PAGE PROYECTOS PROJECTS
 }
 
 #projects-page #projects .container .projects-list {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  /* NEW - Chrome */
-  display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1649,7 +1673,7 @@ SERVICE EACH SERVICIO INDIVIDUAL
   background-size: cover;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  height: 40vh;
+  height: 30vh;
   position: relative;
   width: 100%;
   right: 0;
@@ -1675,7 +1699,7 @@ SERVICE EACH SERVICIO INDIVIDUAL
 .wrapper-hero__service-each .page-hero .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-top: 15vh;
+  padding-top: 20vh;
   padding-bottom: 2%;
   height: auto;
   position: relative;
@@ -1697,7 +1721,7 @@ SERVICE EACH SERVICIO INDIVIDUAL
 }
 
 .wrapper-hero__service-each .page-hero h6 {
-  color: #F8F9FA;
+  color: rgba(220, 55, 4, 0.76);
 }
 
 .wrapper-hero__service-each .page-hero .hero-title {
@@ -1741,6 +1765,44 @@ SERVICE EACH SERVICIO INDIVIDUAL
   transform: translatey(-30%);
 }
 
+.service__cover-paragraph {
+  display: block;
+  font-family: "MonumentExtended", sans-serif;
+  text-transform: uppercase;
+  color: #121417;
+  font-size: 2.8rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 6rem;
+}
+
+.service-each__cover-img__container {
+  background-color: #121417;
+}
+
+.service-each__cover-img__container .service-each__cover-img {
+  width: 100%;
+  margin: 10vh 0;
+  height: 80vh;
+  min-height: 50vh;
+  max-height: 60vh;
+  background: gray;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-image: none;
+  background-size: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+}
+
 #service-automation-page #service-automation {
   margin: 0 auto;
   width: 100%;
@@ -1750,13 +1812,13 @@ SERVICE EACH SERVICIO INDIVIDUAL
 }
 
 #service-automation-page .service-each-paragraph {
-  background-color: #121417;
+  background-color: white;
 }
 
 #service-automation-page .service-each-paragraph .container {
   text-align: center;
   padding-top: 10%;
-  padding-bottom: 20%;
+  padding-bottom: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1766,15 +1828,7 @@ SERVICE EACH SERVICIO INDIVIDUAL
 }
 
 #service-automation-page .service-each-paragraph .container .col {
-  padding: 0 20%;
-}
-
-#service-automation-page .service-each-paragraph .container .col h3 {
-  color: #F8F9FA;
-}
-
-#service-automation-page .service-each-paragraph .container .col p {
-  width: 50%;
+  padding: 0 30%;
 }
 
 #service-automation-page .c-logo-grid .container .grid > div {
@@ -1815,7 +1869,7 @@ SERVICE EACH SERVICIO INDIVIDUAL
   margin: 0 auto;
   width: 100%;
   display: block;
-  background-color: #F8F9FA;
+  background-color: white;
   position: relative;
 }
 
@@ -2191,6 +2245,12 @@ PAGES MEDIA QUERIES
 }
 
 @media only screen and (max-width: 640px) {
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
   .wrapper-hero .page-hero .container {
     padding-top: 30vh;
   }
@@ -2220,6 +2280,39 @@ PAGES MEDIA QUERIES
   }
   #services_ .container .column_container .row .col + .col {
     margin-top: 72px;
+  }
+  .wrapper-hero__service-each .page-hero .hero-title {
+    font-size: 2rem;
+  }
+  .service-each__cover-img__container .service-each__cover-img {
+    height: 30vh;
+    min-height: 30vh;
+  }
+  #service-automation-page .service-each-paragraph {
+    padding-top: 6rem;
+  }
+  #service-automation-page .service-each-paragraph .container .col {
+    padding: 0 0;
+  }
+  #service-automation-page .c-logo-grid .container .grid > div {
+    width: 30%;
+  }
+  #service-automation-page .c-logo-grid .container .grid > div .clients-logo-square {
+    margin: 0;
+  }
+  #service-automation-page .c-logo-grid .container .grid > div .clients-logo-square img {
+    max-width: 100%;
+    height: 40px;
+  }
+  .service__cover-paragraph {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  .service-each__info .container h3 {
+    font-size: 1.45rem;
+  }
+  .see-projects_cta .container .mask {
+    height: 6vw;
   }
 }
 
@@ -2922,45 +3015,51 @@ PAGES MEDIA QUERIES
   display: block;
 }
 
-/*
-@media only screen and (max-width : 640px) {
-  .main-content{
-    #about{
-      .container{
-        .mask{
-          height: 2vw;
-        }
-      }
-    }
-    #certifications{
-      .container{
-        .mask{
-          height: 2vw;
-          margin-bottom: 6%;
-        }
-      }
-    }
-    #stats{
-      .container{
-        .mask{
-          height: 2vw;
-          margin-bottom: 6%;
-        }
-      }
-    }
-    #services_hover{
-      .front-industries{
-        .container{
-          .mask{
-            height: 2vw;
-            margin-bottom: 6%;
-          }
-        }
-      }
-    }
+/***************
+****************
+****************
+  BREAKPOINTS
+****************
+****************
+****************
+****************/
+@media only screen and (max-width: 640px) {
+  .main-content #about .container .mask {
+    height: 3vw;
+  }
+  .main-content #certifications .container .mask {
+    height: 6vw;
+    margin-bottom: 6%;
+  }
+  .main-content #stats .container .mask {
+    height: 6vw;
+    margin-bottom: 6%;
+  }
+  .main-content #services_hover .front-industries .container .mask {
+    height: 6vw;
+    margin-bottom: 6%;
+  }
+  .main-content #projects .container .mask {
+    height: 6vw;
+    margin-bottom: 6%;
+  }
+  .main-content #machinery .container .mask {
+    height: 6vw;
+    margin-bottom: 6%;
+  }
+  .main-content #contact_cta .container .mask {
+    margin-bottom: 6%;
   }
 }
-*/
+
+/***************
+****************
+****************
+  PAGES STYLES
+****************
+****************
+****************
+****************/
 /***************
     NOSOTROS ABOUT
   ****************/
@@ -3363,6 +3462,299 @@ PAGES MEDIA QUERIES
           transition-delay: 0.4s;
 }
 
+@media only screen and (max-width: 640px) {
+  .see-projects_cta .container .mask {
+    height: 6vw;
+    margin-bottom: 6%;
+  }
+}
+
+#footer__credits, .footer__page__title {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+#footer {
+  padding: 60px 0 40px;
+  background-color: #090A0B;
+  color: #fff;
+}
+
+.page-id-not-found #footer {
+  display: none;
+}
+
+#footer__inner {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-align: left;
+  -webkit-box-align: left;
+          align-items: left;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#footer__logo {
+  width: 133px;
+  height: 41px;
+}
+
+#footer__logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#footer__logo path {
+  fill: #fff;
+}
+
+#footer__pages {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  padding: 25px 0;
+  margin-top: 60px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  border-top: 1px solid #414141;
+  border-bottom: 1px solid #414141;
+}
+
+#footer__pages #footer__pages::after {
+  content: "";
+  width: 100%;
+  -ms-flex-order: 1;
+  -webkit-box-ordinal-group: 2;
+          order: 1;
+}
+
+.footer__page {
+  display: inline-block;
+  height: 40px;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-order: 1;
+  -webkit-box-ordinal-group: 2;
+          order: 1;
+}
+
+.footer__page:nth-child(n + 6) {
+  -ms-flex-order: 2;
+  -webkit-box-ordinal-group: 3;
+          order: 2;
+}
+
+.footer__page__title {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  color: #F8F9FA;
+  font-size: 9px;
+  line-height: 1em;
+  font-weight: 500;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.no-touchevents .footer__page__title:hover {
+  color: #fff;
+}
+
+.footer__page__sections {
+  display: none;
+}
+
+.footer__page__section__title {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #868686;
+  font-size: 12px;
+  line-height: 1em;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.no-touchevents .footer__page__section__title:hover {
+  color: #fff;
+}
+
+#footer__contact {
+  margin-top: 70px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67em;
+  color: #959595;
+}
+
+#footer__contact strong {
+  display: inline-block;
+  padding-bottom: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+#footer__social {
+  margin-top: 2rem;
+}
+
+#footer__social .social li a {
+  font-size: 16px;
+  padding: 20px;
+}
+
+#footer__social .social li + li {
+  margin-left: 0px;
+}
+
+#footer__bottom {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  margin-top: 135px;
+  font-size: 12px;
+  line-height: 1em;
+}
+
+#footer__copyright {
+  margin-right: 40px;
+  color: #656565;
+}
+
+#footer__credits {
+  margin-left: auto;
+  font-size: 9px;
+  line-height: 1.33em;
+}
+
+#footer__credits #footer__credits__txt {
+  color: #6c6c6c;
+}
+
+#footer__credits__link {
+  color: #c6c6c6;
+}
+
+@media screen and (min-width: 1024px) {
+  #footer {
+    padding: 70px 0 50px;
+  }
+  #footer__inner {
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+  }
+  #footer__inner::after {
+    content: "";
+    position: absolute;
+    top: 97px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #272727;
+  }
+  #footer__pages {
+    width: 83.14%;
+    padding: 0;
+    margin-top: 35px;
+    -ms-flex-pack: end;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+    border: none;
+  }
+  .footer__page__sections {
+    display: block;
+  }
+  .footer__page__title {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-bottom: 105px;
+  }
+  .footer__page {
+    height: auto;
+    min-width: 11.23%;
+    padding-left: 20px;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+  .footer__page:nth-child(n + 6) {
+    -ms-flex-order: 1;
+    -webkit-box-ordinal-group: 2;
+            order: 1;
+  }
+  .footer__page:last-child {
+    min-width: 0;
+  }
+  #footer__contact {
+    position: absolute;
+    top: 145px;
+    left: 0;
+    margin-top: 0;
+  }
+  #footer__contact strong {
+    padding-bottom: 0;
+  }
+  #footer__social {
+    position: absolute;
+    top: 320px;
+    left: 0;
+    margin-top: 2rem;
+  }
+  #footer__social .social li a {
+    padding: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  #footer {
+    padding-top: 120px;
+  }
+  #footer__logo {
+    margin-top: 15px;
+    width: 160px;
+    height: 50px;
+  }
+  #footer__pages {
+    width: 74.79%;
+  }
+}
+
 *, *::after, *::before {
   text-rendering: optimizeLegibility;
   -webkit-box-sizing: border-box;
@@ -3416,49 +3808,6 @@ a, .btn, input, button {
   border-left: 1.25px solid rgba(108, 117, 125, 0.1);
 }
 
-/***************
-
-.grid-black .grid-design .col{
-  border-right-color: rgba(0, 0, 0, 0.35);
-}
-
-.grid-absolute .grid-design {
-  position: absolute;
-
-  .col {
-    height: 200vh;
-  }
-}
-
-
-@media (max-width: 1199.98px){
-  .grid-design{
-    padding: 0 7.5%;
-
-    .col:first-child{
-      border-left: 1px solid rgba(0, 0, 0, 0.05);
-    }
-  }
-
-  .grid-black .grid-design .col:first-child{
-    border-left-color: rgba(0, 0, 0, 0.35);
-  }
-}
-
-@media (max-width: 899.98px){
-  .grid-design{
-    padding: 0 12.5%;
-  }
-}
-
-@media (max-width: 599.98px){
-  .grid-design{
-    padding: 0 30px;
-  }
-}
-
-   END GRID
-****************/
 .cta_container {
   display: block;
   margin-top: 30px;
@@ -3711,8 +4060,8 @@ a, .btn, input, button {
   display: block;
   z-index: 999;
   /***************
-     TEAM
-****************/
+      TEAM
+  ****************/
   /***************
 	   END TEAM
 	****************/
@@ -3729,7 +4078,10 @@ a, .btn, input, button {
 	    STATS
   ****************/
   /***************
-    SERVICES HOVER -some stealing-
+	    End STATS
+  ****************/
+  /***************
+    SERVICES HOVER
   ****************/
   /***************
     END SERVICES HOOVER -some stealing-
@@ -3756,6 +4108,18 @@ a, .btn, input, button {
   /***************
 	    END CTA CONTACT
 	****************/
+  /*******************
+    CLIENT GRID
+  ********************/
+  /***************
+    END GRID
+  ****************/
+  /*******************
+        CONTACT
+  ********************/
+  /***************
+    END CONTACT
+  ****************/
 }
 
 .main-content #about {
@@ -3815,6 +4179,7 @@ a, .btn, input, button {
 }
 
 .main-content #certifications-grid {
+  padding-top: 4rem;
   padding-bottom: 12%;
   background-color: white;
   margin: 0 auto;
@@ -3839,6 +4204,9 @@ a, .btn, input, button {
   justify-items: stretch;
   -ms-flex-line-pack: justify;
       align-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .main-content #certifications-grid .container .grid-flex-cert:after {
@@ -3848,29 +4216,40 @@ a, .btn, input, button {
 }
 
 .main-content #certifications-grid .container .grid-flex-cert .grid-item {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #F8F9FA;
   padding: 3rem 1rem;
   border: 6px solid white;
   width: 25%;
-  height: 100%;
+  height: 33vh;
   max-width: 400px;
   min-height: 330px;
   padding: 30px 35px;
   position: relative;
-  display: block;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.main-content #certifications-grid .container .grid-flex-cert .grid-item img {
-  margin: 0 auto;
-  width: 100%;
-  display: block;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  min-width: 100px;
+.main-content #certifications-grid .container .grid-flex-cert .grid-item .cert {
+  height: 40rem;
+  -ms-flex-item-align: middle;
+      -ms-grid-row-align: middle;
+      align-self: middle;
 }
 
-.main-content #certifications-grid .container .grid-flex-cert .grid-item h4 {
+.main-content #certifications-grid .container .grid-flex-cert .grid-item .cert .cert-text h4 {
   display: block;
   font-family: "MonumentExtended", sans-serif;
   font-size: 1.2rem;
@@ -3886,10 +4265,10 @@ a, .btn, input, button {
           transition-duration: 1.4s;
 }
 
-.main-content #certifications-grid .container .grid-flex-cert .grid-item p {
+.main-content #certifications-grid .container .grid-flex-cert .grid-item .cert .cert-text p {
   font-family: "Archivo", sans-serif;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 400;
+  font-size: 0.9rem;
   text-transform: uppercase;
   font-style: normal;
   font-stretch: normal;
@@ -3898,24 +4277,21 @@ a, .btn, input, button {
   color: #999999;
 }
 
+.main-content #certifications-grid .container .grid-flex-cert .grid-item .cert img {
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 100px;
+}
+
 .main-content #certifications-grid .container .grid-flex-cert .grid-item a {
-  color: #343A40;
+  color: #6C757D;
   font-family: "Archivo", sans-serif;
 }
 
 .main-content #certifications-grid .container .grid-flex-cert .grid-item a:hover {
-  color: rgba(220, 55, 4, 0.76);
-  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.main-content #certifications-grid .container .grid-flex-cert .grid-item a i {
-  border-color: #343A40;
-  font-size: 5px;
-  margin-right: 2px;
-}
-
-.main-content #certifications-grid .container .grid-flex-cert .grid-item a i:hover {
   color: rgba(220, 55, 4, 0.76);
   -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -4255,10 +4631,12 @@ a, .btn, input, button {
 
 @media (max-width: 599.98px) {
   .main-content #services_hover .front-industries {
-    padding-top: 3rem;
+    padding-top: 12rem;
+    padding-bottom: 0;
   }
   .main-content #services_hover .front-industries .nav-industries {
-    margin-top: 3rem;
+    padding-top: 8rem;
+    padding-bottom: 12rem;
     font-size: 1.2rem;
   }
 }
@@ -4462,10 +4840,7 @@ a, .btn, input, button {
   color: white;
 }
 
-/*******************
-  CLIENT GRID
-********************/
-.c-logo-grid {
+.main-content .c-logo-grid {
   background-color: white;
   position: relative;
   margin: 0 auto;
@@ -4473,11 +4848,11 @@ a, .btn, input, button {
   display: block;
 }
 
-.c-logo-grid .container {
+.main-content .c-logo-grid .container {
   padding-bottom: 9.4%;
 }
 
-.c-logo-grid .container .grid {
+.main-content .c-logo-grid .container .grid {
   margin: 0 auto;
   width: 100%;
   display: block;
@@ -4497,13 +4872,13 @@ a, .btn, input, button {
   justify-items: stretch;
 }
 
-.c-logo-grid .container .grid:after {
+.main-content .c-logo-grid .container .grid:after {
   content: "";
   display: block;
   clear: both;
 }
 
-.c-logo-grid .container .grid > div {
+.main-content .c-logo-grid .container .grid > div {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -4512,15 +4887,15 @@ a, .btn, input, button {
   outline: 0;
   display: block;
   /*
-          img{
-            display: block;
-            width: 100%;
-            height: auto;
-          }
-          */
+            img{
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+            */
 }
 
-.c-logo-grid .container .grid > div .clients-logo-square {
+.main-content .c-logo-grid .container .grid > div .clients-logo-square {
   background-color: #F8F9FA;
   padding: 2rem;
   margin: 1rem;
@@ -4537,13 +4912,13 @@ a, .btn, input, button {
           align-items: center;
 }
 
-.c-logo-grid .container .grid > div .clients-logo-square::before {
+.main-content .c-logo-grid .container .grid > div .clients-logo-square::before {
   content: "";
   display: block;
   padding-bottom: 70%;
 }
 
-.c-logo-grid .container .grid > div .clients-logo-square img {
+.main-content .c-logo-grid .container .grid > div .clients-logo-square img {
   display: block;
   width: 200px;
   max-width: 70%;
@@ -4555,13 +4930,7 @@ a, .btn, input, button {
   margin: auto;
 }
 
-/***************
-  END GRID
-****************/
-/*******************
-      CONTACT
-********************/
-#contact {
+.main-content #contact {
   margin: 0 auto;
   width: 100%;
   display: block;
@@ -4573,7 +4942,7 @@ a, .btn, input, button {
   min-height: 100vh;
 }
 
-#contact > .container {
+.main-content #contact > .container {
   padding-top: 70px;
   padding-bottom: 70px;
   text-align: center;
@@ -4583,11 +4952,11 @@ a, .btn, input, button {
   transform: translateY(-50%);
 }
 
-#contact > .container h2 {
+.main-content #contact > .container h2 {
   color: #101010;
 }
 
-#contact > .container h2 a {
+.main-content #contact > .container h2 a {
   font-size: 7.7vw;
   line-height: 1.04;
   letter-spacing: -5.4px;
@@ -4598,11 +4967,11 @@ a, .btn, input, button {
   position: relative;
 }
 
-#contact > .container h2 a:hover, #contact > .container h2 a:focus {
+.main-content #contact > .container h2 a:hover, .main-content #contact > .container h2 a:focus {
   text-decoration: none;
 }
 
-#contact > .container h2 a:after {
+.main-content #contact > .container h2 a:after {
   content: "";
   width: 100%;
   height: 5px;
@@ -4625,7 +4994,7 @@ a, .btn, input, button {
           transform-origin: left center;
 }
 
-#contact > .container h2 a:hover:after {
+.main-content #contact > .container h2 a:hover:after {
   -webkit-transform-origin: left center;
           transform-origin: left center;
   transition: -webkit-transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995);
@@ -4640,7 +5009,7 @@ a, .btn, input, button {
   transform: scaleX(1);
 }
 
-#contact > .container p {
+.main-content #contact > .container p {
   font-size: 1.7vw;
   margin-top: 2.2%;
   transition: -webkit-transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995), opacity 0.6s ease-in;
@@ -4653,26 +5022,23 @@ a, .btn, input, button {
           transition-delay: 0.4s;
 }
 
-#contact > .container p b {
+.main-content #contact > .container p b {
   font-weight: 500;
   color: #ffffff;
 }
 
-#contact > .container.animate_show h1 {
+.main-content #contact > .container.animate_show h1 {
   opacity: 0;
   -webkit-transform: translateY(120px);
           transform: translateY(120px);
 }
 
-#contact > .container.animate_show p {
+.main-content #contact > .container.animate_show p {
   opacity: 0;
   -webkit-transform: translateY(27px);
           transform: translateY(27px);
 }
 
-/***************
-  END CONTACT
-****************/
 /********************
   END main content
 *********************/
@@ -4760,11 +5126,6 @@ a, .btn, input, button {
   .main-content #about .container {
     padding-top: 104px;
     padding-bottom: 88px;
-  }
-  .main-content #about .container h6 {
-    font-size: 10px;
-    letter-spacing: 2.7px;
-    padding-bottom: 31px;
   }
   .main-content #about .container h3 {
     font-size: 4vw;
@@ -4893,10 +5254,12 @@ a, .btn, input, button {
 
 @media only screen and (max-width: 640px) {
   h6 {
-    font-size: 10px;
+    font-size: 8.3px;
+    letter-spacing: 2px;
   }
   h3 {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.2;
     margin-bottom: 2rem;
   }
   p {
@@ -4904,19 +5267,30 @@ a, .btn, input, button {
     line-height: 28px;
     color: #6C757D;
   }
+  .cta {
+    padding: 12px 23px;
+    font-size: 8.8px;
+    letter-spacing: 0.7px;
+  }
+  .cta2 {
+    padding: 18px 18px 12px 0;
+    font-size: 8.8px;
+    letter-spacing: 0.7px;
+  }
+  .dash {
+    width: 3rem;
+  }
   #hero {
     height: 100%;
   }
   #hero .container .text_middle {
     padding-top: 146px;
+    width: 90%;
   }
   #hero .container .text_middle h2 {
-    font-size: 32px;
+    font-size: 40px;
     line-height: 1;
     letter-spacing: -1.6px;
-  }
-  #hero .container .text_middle .words_container {
-    height: 51px;
   }
   #hero .container .cta_container {
     display: block;
@@ -4924,34 +5298,63 @@ a, .btn, input, button {
     top: inherit;
     left: 24px;
   }
+  #hero .container .cta_container .cta {
+    padding: 12px 23px;
+    font-size: 9px;
+  }
   #hero .container .wrap-logos-hero {
     position: absolute;
-    bottom: 100px;
+    bottom: 300px;
     left: 24px;
+    right: 8vw;
+    max-width: 82vw;
   }
   #hero .container .wrap-logos-hero .img-logos-hero .img-logo-hero {
     max-height: 60px;
   }
+  #hero .container .social {
+    right: -208px;
+    top: 0;
+    bottom: 400px;
+  }
+  #hero .container .social li a {
+    font-size: 14px;
+    padding: 14px;
+  }
   #hero .container .btn_scroll {
     display: none;
   }
-  .main-content #about .container h3 {
-    font-size: 1.8rem;
-    line-height: 1.2;
+  .slider {
+    margin-top: 10rem;
   }
-  .main-content .c-grid {
-    -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  .slider .swiper-container .swiper-wrapper .swiper-slide {
+    height: 40%;
+  }
+  .slider .swiper-container .swiper-pagination {
+    visibility: hidden;
+  }
+  .main-content #about .container h3 {
+    font-size: 1.4rem;
+    line-height: 1.2;
   }
   .main-content #certifications {
     margin-top: 60px;
   }
   .main-content #certifications-grid .container .grid-flex-cert .grid-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 50%;
-    padding: 10px;
+    padding: 10px 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 290px;
   }
   .main-content #certifications-grid .container .grid-flex-cert img {
-    max-width: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70% !important;
   }
   .main-content #certifications-grid .container .grid-flex-cert h4 {
     font-size: 1.1rem;
@@ -4969,6 +5372,12 @@ a, .btn, input, button {
   .main-content #stats .container .column_container .row .home-stats .label-stat {
     font-size: 12px;
     line-height: 1.625rem;
+  }
+  .main-content #projects {
+    padding: 6rem 0 8rem;
+  }
+  .main-content #machinery {
+    padding: 6rem 0 8rem;
   }
   .main-content #services .container {
     padding-top: 80px;
