@@ -817,31 +817,34 @@ a:focus, a:hover{
 }
 @media only screen and (max-width : 640px) {
     #wrapper_header {
-        #header {
-            .container {
-              .wrapper_menu{
-                .menu_contact{
-                  display: none;
+      #header {
+        .container {
+          .wrapper_menu{
+            .menu_contact{
+              display: none;
+            }
+            .menu_language{
+              display: none;
+            }
+            nav {
+              #m_nav_container {
+                &::before{
+                  height: 100%;
                 }
-                .menu_language{
-                  display: none;
-                }
-                nav {
-                    #m_nav_container {
-                        .navbar {
-                            li {
-                                a{
-                                    font-size: 43px;
-                                    line-height: 1.3;
-                                    letter-spacing: -1.5px;
-                                }
-                            }
-                        }
+                .navbar {
+                  li {
+                    a{
+                      font-size: 14px;
+                      line-height: 1.3;
+                      letter-spacing: 1.2px;
                     }
+                  }
                 }
               }
             }
+          }
         }
+      }
     }
     /*
     .footer{
