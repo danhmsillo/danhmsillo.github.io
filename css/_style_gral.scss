@@ -829,7 +829,7 @@ a:focus, a:hover{
             nav {
               #m_nav_container {
                 &::before{
-                  height: 100%;
+                  height: 90%;
                 }
                 .navbar {
                   li {
@@ -1657,10 +1657,18 @@ PROJECT EACH PROYECTO INDIVIDUAL
 
 
 /****/
+.project-each__info-img-wrapper{
+  .container{
+    text-align: center;
+    padding: 0 18% 12rem;
+    //img{
+    //}
+  }
+}
 
 .wrapper-project__cover-info{
   position:relative;
-  background-color: $neutral1;
+  background-color: white;
   .project__tags {
     @include block;
     position:relative;
@@ -1763,7 +1771,7 @@ PROJECT EACH PROYECTO INDIVIDUAL
 /****/
 
 .project-each__page{
-  background-color: $neutral1;
+  background-color: white;
   .project-each__lg-img-wrapper{
     @include block;
 		position: relative;

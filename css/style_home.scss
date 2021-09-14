@@ -143,11 +143,45 @@ a, .btn, input, button {
    HERO
 ****************/
 #hero{
+  .hero__img-cover{
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // needed to prevent janky scrolling in Safari
+    backface-visibility: hidden;
+    //100% height of the viewport
+    height: 100vh;
+    //overflow: hidden;
+    position: relative;
+    width: 100%;
+    right: 0;
+    
+    @media screen and (min-width:640px) {
+      background-position: 50% 0%;
+    }
+    // Add a slight overlay on our image
+    
+  }
+  &::after {
+    background: rgb(18,20,23);
+    background: -moz-linear-gradient(180deg, rgba(18,20,23,0.17689082468925066) 0%, rgba(18,20,23,0.8267507686668417) 87%, rgba(18,20,23,1) 99%);
+    background: -webkit-linear-gradient(180deg, rgba(18,20,23,0.17689082468925066) 0%, rgba(18,20,23,0.8267507686668417) 87%, rgba(18,20,23,1) 99%);
+    background: linear-gradient(180deg, rgba(18,20,23,0.17689082468925066) 0%, rgba(18,20,23,0.8267507686668417) 87%, rgba(18,20,23,1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121417",endColorstr="#121417",GradientType=1); 
+    bottom: 0;
+    content: '';
+    left: -2000%;
+    position: absolute;
+    right: -2000%;
+    top: 0;
+    z-index: 1;
+  }
 	@include block;
 	background-color: #101010;
 	height: 100vh;
 	min-height: 768px;
 	position: relative;
+  
 	.container{
 		height: 100%;
 		max-width: 100%;
@@ -166,7 +200,7 @@ a, .btn, input, button {
 			z-index: 4;
 			margin-top: -50px;
 			h2{
-				font-size: 5vw;
+				font-size: 4vw;
 				font-weight: bold;
 				font-style: normal;
 				font-stretch: normal;
@@ -632,7 +666,7 @@ a, .btn, input, button {
           .num{
             opacity: 0.5;
             font-size: 1.2rem;
-            top: 50%;
+            top: 46%;
           }
           a {
             position: relative;
@@ -695,13 +729,27 @@ a, .btn, input, button {
       padding: 11.9444444444rem 0 13.3333333333rem;
     }
   }
-
+  
   @media (max-width: 1199.98px) {
-    .front-industries {
-      padding: 10rem 0;
-    }
-  }
+    #services_hover{
+      .front-industries {
+        padding: 10rem 0;
 
+        .industries-text{
+          p{
+            width: 40%;
+          }
+        }
+  
+        .nav-industries{
+          padding-top: 3rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+    
+  }
+  
   @media (max-width: 899.98px) {
 
     .front-industries {
@@ -730,8 +778,7 @@ a, .btn, input, button {
         }
       }
     }
-
-
+    
     .front-industries .nav-industries ul li a + div {
       width: 100vw;
       right: auto;
@@ -796,23 +843,23 @@ a, .btn, input, button {
               font-size: 0;
               list-style: none;
               .card {
-              display: inline-block;
-              width: 100%;
-              max-width: 37vw;
-              min-width: 300px;
-              margin: 1rem;
-              font-size: 1rem;
-              text-decoration: none;
-              overflow: hidden;
-              //box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
-              //transition: transform 0.1s ease-in-out, box-shadow 0.1s;
-              transition: all .4s cubic-bezier(.77,0,.175,1);
+                display: inline-block;
+                width: 100%;
+                max-width: 37vw;
+                min-width: 300px;
+                margin: 1rem;
+                font-size: 1rem;
+                text-decoration: none;
+                overflow: hidden;
+                //box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+                //transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+                transition: all .4s cubic-bezier(.77,0,.175,1);
                 &:hover {
                   transform: translateY(-0.5rem) scale(1.0125);
                   box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
                 }
                 .card-image{
-                  max-height: 412px;
+                  max-height: 500px;
                 }
                 .card-description {
                   display: block;
@@ -831,6 +878,10 @@ a, .btn, input, button {
                     margin: 0;
                   }
                 }
+                .cta2{
+                  padding-left: 2rem;
+                  font-size: 1.01rem;
+                }
               }  
             }
           }
@@ -842,7 +893,8 @@ a, .btn, input, button {
     /* Lazy Load Styles */
     .card-image {
       display: block;
-      min-height: 20rem; /* layout hack */
+      //min-height: 25vh;
+      min-height: 45rem; /* layout hack */
       background: #fff center center no-repeat;
       background-size: cover;
       filter: blur(3px); /* blur the lowres image */
@@ -869,10 +921,16 @@ a, .btn, input, button {
                 .project-listed{
                   max-width: 460px;
                 }
+                .card{
+                  min-width: 8 50px;
+                }
               }
             } 
           }  
         }
+      }
+      .card-image{
+        min-height: 25rem; 
       }
     }
 
@@ -885,10 +943,46 @@ a, .btn, input, button {
                 .project-listed{
                   margin: 0 0 15px;
                 }
+                .card{
+                  min-width: 650px;
+                }
               }
             } 
           }  
         }
+      }
+      .card-image{
+        min-height: 30rem;
+      }
+    }
+    @media only screen and (max-width : 795px) {
+      #projects{
+        .container{
+          .column_container{
+            .row{
+              .projects-list{
+                .card{
+                  //min-width: 500px;
+                  max-width: 80vw;
+                  .card-description{
+                    .project_title{
+                      font-size: 1.2rem;
+                    }
+                    .client{
+                      font-size: 0.7rem ;
+                    } 
+                  }
+                }
+                //.project-listed{
+                //  max-width: 460px;
+               // }
+              }
+            } 
+          }  
+        }
+      }
+      .card-image{
+        min-height: 30rem;
       }
     }
   /***************
@@ -950,7 +1044,7 @@ a, .btn, input, button {
     @include block;
     position: relative;
     background-color: $neutral5-secondary-color;
-    padding-bottom: 25%;
+    //padding-bottom: 25%;
     .container{
       padding-top: 9.4%;
       padding-bottom: 14.2%;
@@ -1129,8 +1223,13 @@ a, .btn, input, button {
 ****************/ 
 @media only screen and (max-width : 1440px) {
   h6{
-    font-size: 12px;
+    font-size: 0.85rem;
   }
+  h3{
+    //font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
 	#wrapper_header {
         #header {
             .container {
@@ -1172,6 +1271,12 @@ a, .btn, input, button {
     }
 	#hero{
 		.container{
+      .text_middle{
+        h2{
+          font-size: 3.6vw;
+          line-height: 1.2;
+        }
+      }
 			.img_hero{
 				display: block;
 				position: absolute;
@@ -1231,7 +1336,11 @@ a, .btn, input, button {
 
 @media only screen and (max-width : 960px) {
   h6{
-    font-size: 12px;
+    font-size: 0.83rem;
+  }
+  h3{
+    font-size: 2.3rem !important;
+    width: 70%;
   }
 	#hero{
 		.container{
@@ -1273,6 +1382,14 @@ a, .btn, input, button {
     .c-grid{
       grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
+    #stats{
+      .container{
+        .home-stats{
+          padding: 6rem 0;
+        }
+      }
+    }
+
 		#services{
 			.container{
 				h6{

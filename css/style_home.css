@@ -65,7 +65,6 @@
 .card__image-container {
   max-height: 10rem;
   /* Stop the image getting too big */
-  background-image: url("https://source.unsplash.com/random");
   background-size: cover;
   /* Force the background image to cover the container */
   background-position: center center;
@@ -1117,7 +1116,7 @@ a:focus, a:hover {
     display: none;
   }
   #wrapper_header #header .container .wrapper_menu nav #m_nav_container::before {
-    height: 100%;
+    height: 90%;
   }
   #wrapper_header #header .container .wrapper_menu nav #m_nav_container .navbar li a {
     font-size: 14px;
@@ -2002,9 +2001,14 @@ PROJECT EACH PROYECTO INDIVIDUAL
 }
 
 /****/
+.project-each__info-img-wrapper .container {
+  text-align: center;
+  padding: 0 18% 12rem;
+}
+
 .wrapper-project__cover-info {
   position: relative;
-  background-color: #F8F9FA;
+  background-color: white;
 }
 
 .wrapper-project__cover-info .project__tags {
@@ -2116,7 +2120,7 @@ PROJECT EACH PROYECTO INDIVIDUAL
 
 /****/
 .project-each__page {
-  background-color: #F8F9FA;
+  background-color: white;
 }
 
 .project-each__page .project-each__lg-img-wrapper {
@@ -3896,6 +3900,38 @@ a, .btn, input, button {
   position: relative;
 }
 
+#hero .hero__img-cover {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  right: 0;
+}
+
+@media screen and (min-width: 640px) {
+  #hero .hero__img-cover {
+    background-position: 50% 0%;
+  }
+}
+
+#hero::after {
+  background: #121417;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 20, 23, 0.176891)), color-stop(87%, rgba(18, 20, 23, 0.826751)), color-stop(99%, #121417));
+  background: linear-gradient(180deg, rgba(18, 20, 23, 0.176891) 0%, rgba(18, 20, 23, 0.826751) 87%, #121417 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121417",endColorstr="#121417",GradientType=1);
+  bottom: 0;
+  content: '';
+  left: -2000%;
+  position: absolute;
+  right: -2000%;
+  top: 0;
+  z-index: 1;
+}
+
 #hero .container {
   height: 100%;
   max-width: 100%;
@@ -3919,7 +3955,7 @@ a, .btn, input, button {
 }
 
 #hero .container .text_middle h2 {
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -4524,7 +4560,7 @@ a, .btn, input, button {
 .main-content #services_hover .nav-industries ul li .num {
   opacity: 0.5;
   font-size: 1.2rem;
-  top: 50%;
+  top: 46%;
 }
 
 .main-content #services_hover .nav-industries ul li a {
@@ -4587,8 +4623,15 @@ a, .btn, input, button {
 }
 
 @media (max-width: 1199.98px) {
-  .main-content .front-industries {
+  .main-content #services_hover .front-industries {
     padding: 10rem 0;
+  }
+  .main-content #services_hover .front-industries .industries-text p {
+    width: 40%;
+  }
+  .main-content #services_hover .front-industries .nav-industries {
+    padding-top: 3rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -4712,7 +4755,7 @@ a, .btn, input, button {
 }
 
 .main-content #projects .container .column_container .row .projects-list .card .card-image {
-  max-height: 412px;
+  max-height: 500px;
 }
 
 .main-content #projects .container .column_container .row .projects-list .card .card-description {
@@ -4735,9 +4778,14 @@ a, .btn, input, button {
   margin: 0;
 }
 
+.main-content #projects .container .column_container .row .projects-list .card .cta2 {
+  padding-left: 2rem;
+  font-size: 1.01rem;
+}
+
 .main-content .card-image {
   display: block;
-  min-height: 20rem;
+  min-height: 45rem;
   /* layout hack */
   background: #fff center center no-repeat;
   background-size: cover;
@@ -4767,11 +4815,38 @@ a, .btn, input, button {
   .main-content #projects .container .column_container .row .projects-list .project-listed {
     max-width: 460px;
   }
+  .main-content #projects .container .column_container .row .projects-list .card {
+    min-width: 8 50px;
+  }
+  .main-content .card-image {
+    min-height: 25rem;
+  }
 }
 
 @media (min-width: 796px) {
   .main-content #projects .container .column_container .row .projects-list .project-listed {
     margin: 0 0 15px;
+  }
+  .main-content #projects .container .column_container .row .projects-list .card {
+    min-width: 650px;
+  }
+  .main-content .card-image {
+    min-height: 30rem;
+  }
+}
+
+@media only screen and (max-width: 795px) {
+  .main-content #projects .container .column_container .row .projects-list .card {
+    max-width: 80vw;
+  }
+  .main-content #projects .container .column_container .row .projects-list .card .card-description .project_title {
+    font-size: 1.2rem;
+  }
+  .main-content #projects .container .column_container .row .projects-list .card .card-description .client {
+    font-size: 0.7rem;
+  }
+  .main-content .card-image {
+    min-height: 30rem;
   }
 }
 
@@ -4827,7 +4902,6 @@ a, .btn, input, button {
   display: block;
   position: relative;
   background-color: #121417;
-  padding-bottom: 25%;
 }
 
 .main-content #contact_cta .container {
@@ -5047,7 +5121,10 @@ a, .btn, input, button {
 ****************/
 @media only screen and (max-width: 1440px) {
   h6 {
-    font-size: 12px;
+    font-size: 0.85rem;
+  }
+  h3 {
+    line-height: 1.2;
   }
   #wrapper_header #header .container #toggle_m_nav {
     width: 31px;
@@ -5078,6 +5155,10 @@ a, .btn, input, button {
     width: 31px;
     overflow: hidden;
   }
+  #hero .container .text_middle h2 {
+    font-size: 3.6vw;
+    line-height: 1.2;
+  }
   #hero .container .img_hero {
     display: block;
     position: absolute;
@@ -5105,7 +5186,11 @@ a, .btn, input, button {
 
 @media only screen and (max-width: 960px) {
   h6 {
-    font-size: 12px;
+    font-size: 0.83rem;
+  }
+  h3 {
+    font-size: 2.3rem !important;
+    width: 70%;
   }
   #hero .container .text_middle {
     margin-top: 0;
@@ -5136,6 +5221,9 @@ a, .btn, input, button {
   .main-content .c-grid {
     -ms-grid-columns: (minmax(120px, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  .main-content #stats .container .home-stats {
+    padding: 6rem 0;
   }
   .main-content #services .container h6 {
     font-size: 10px;
