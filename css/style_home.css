@@ -689,7 +689,7 @@ a:focus, a:hover {
   max-width: 160px;
   margin: auto;
   position: absolute;
-  bottom: 64px;
+  bottom: 204px;
   left: 50%;
   min-height: 24px;
   overflow: hidden;
@@ -1268,7 +1268,7 @@ PAGE NOSOTROS ABOUT
 
 #about #about-page #machinery_about .container {
   text-align: center;
-  padding-bottom: 44rem;
+  padding-bottom: 18rem;
 }
 
 #about #about-page #machinery_about .container .machinery-features {
@@ -1515,8 +1515,14 @@ PAGE CONTACTO CONTACT
   background-color: #090A0B;
 }
 
+#contact-page #stats .img-contact {
+  max-width: 70%;
+  margin-top: 4rem;
+}
+
 #contact-page #stats .container {
   padding-bottom: 1%;
+  padding-top: 9.2%;
 }
 
 #contact-page #stats .container h2 {
@@ -1634,7 +1640,7 @@ PAGE CONTACTO CONTACT
 }
 
 #services_ .container .column_container .row .col .contact__person-mail a {
-  font-size: 0.8vw;
+  font-size: 1.4rem;
   font-family: "Archivo", sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -2418,6 +2424,9 @@ PAGES MEDIA QUERIES
   #about-page .main-content #wrapper-hero #about-hero .hero-title {
     font-size: 10px;
   }
+  #machinery_about .container {
+    padding-bottom: 4rem !important;
+  }
   #projects-page #projects .container .projects-list {
     margin-left: 5px;
   }
@@ -3024,9 +3033,9 @@ PAGES MEDIA QUERIES
   display: block;
   position: relative;
   top: 0;
-  height: 2vw;
+  height: 3vw;
   overflow: hidden;
-  margin-bottom: 2.8%;
+  margin-bottom: 8.8%;
 }
 
 .main-content #clients .container .mask ~ .item_2 {
@@ -3141,9 +3150,9 @@ PAGES MEDIA QUERIES
   display: block;
   position: relative;
   top: 0;
-  height: 2vw;
+  height: 3vw;
   overflow: hidden;
-  margin-bottom: 2.8%;
+  margin-bottom: 6.8%;
 }
 
 .main-content #contact_cta .container .mask ~ .item_2 {
@@ -3431,11 +3440,6 @@ PAGES MEDIA QUERIES
 /***************
     Page CONTACT
   ****************/
-.img-contact {
-  max-width: 70%;
-  margin-top: -12rem;
-}
-
 #services_ .container .mask {
   width: 100%;
   display: block;
@@ -3855,8 +3859,8 @@ PAGES MEDIA QUERIES
 .footer__page {
   display: inline-block;
   height: 40px;
-  -ms-flex-preferred-size: 20%;
-  flex-basis: 20%;
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
           justify-content: center;
@@ -3941,7 +3945,7 @@ PAGES MEDIA QUERIES
 }
 
 #footer__social .social li + li {
-  margin-left: 0px;
+  margin-left: 2px;
 }
 
 #footer__bottom {
@@ -4264,7 +4268,38 @@ a, .btn, input, button {
   margin-top: -50px;
 }
 
-#hero .container .text_middle h2 {
+#hero .container .text_middle .h6-hero-descriptive {
+  color: #F8F9FA;
+  font-family: "MonumentExtended", sans-serif;
+  font-size: 0.82rem;
+  position: relative;
+  font-weight: 800;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1440px) {
+  #hero .container .text_middle .h6-hero-descriptive {
+    font-size: 0.82rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #hero .container .text_middle .h6-hero-descriptive {
+    font-size: 1px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #hero .container .text_middle .h6-hero-descriptive {
+    font-size: 8.3px;
+    letter-spacing: 2px;
+  }
+}
+
+#hero .container .text_middle h1 {
   font-size: 4vw;
   font-weight: bold;
   font-style: normal;
@@ -4275,6 +4310,8 @@ a, .btn, input, button {
   font-family: "MonumentExtended", sans-serif;
   letter-spacing: -1.3px;
   text-align: left;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 #hero .container .cta_container {
@@ -4375,7 +4412,6 @@ a, .btn, input, button {
   outline: 0;
   font-weight: 500;
   font-size: 0.9vw;
-  letter-spacing: 0.32em;
   color: rgba(251, 95, 46, 0.95);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -5469,7 +5505,7 @@ a, .btn, input, button {
     width: 31px;
     overflow: hidden;
   }
-  #hero .container .text_middle h2 {
+  #hero .container .text_middle h1 {
     font-size: 3.6vw;
     line-height: 1.2;
   }
@@ -5509,12 +5545,8 @@ a, .btn, input, button {
   #hero .container .text_middle {
     margin-top: 0;
   }
-  #hero .container .social {
-    right: -21px;
-    bottom: 70px;
-  }
   #hero .container .social li a {
-    font-size: 10px;
+    font-size: 14px;
     letter-spacing: 2.7px;
   }
   #hero .container .btn_scroll {
@@ -5588,7 +5620,7 @@ a, .btn, input, button {
     width: 100%;
     padding-top: 146px;
   }
-  #hero .container .text_middle h2 {
+  #hero .container .text_middle h1 {
     font-size: 9.8vw;
   }
   .main-content #about .container:after {
@@ -5669,7 +5701,7 @@ a, .btn, input, button {
     padding-top: 146px;
     width: 90%;
   }
-  #hero .container .text_middle h2 {
+  #hero .container .text_middle h1 {
     font-size: 20px;
     line-height: 1;
     letter-spacing: -1.2px;
@@ -5695,9 +5727,8 @@ a, .btn, input, button {
     max-height: 60px;
   }
   #hero .container .social {
-    right: -208px;
-    top: 0;
-    bottom: 400px;
+    right: -40px;
+    top: 200px;
   }
   #hero .container .social li a {
     font-size: 14px;
@@ -5780,38 +5811,23 @@ a, .btn, input, button {
   .main-content #services .container .column_container .row .col + .col {
     margin-top: 72px;
   }
-  .main-content #working_remotely {
-    background-position-y: 40px;
+  .main-content #clients .container {
+    padding-top: 9rem;
   }
-  .main-content #working_remotely .container {
-    padding-top: 70px;
-    padding-bottom: 80px;
+  .main-content .c-logo-grid .container {
+    padding-bottom: 12rem;
   }
-  .main-content #working_remotely .container h4 {
-    font-size: 48px;
+  .main-content .c-logo-grid .container .grid > div {
+    width: 25%;
   }
-  .main-content #working_remotely .container p {
-    padding-top: 51px;
-    max-width: 100%;
+  .main-content .c-logo-grid .container .grid > div .clients-logo-square {
+    padding: 0.8rem;
+    margin: 0;
   }
-  .main-content #working_remotely .container .column_container {
-    max-width: 100%;
-    margin-top: 48px;
-  }
-  .main-content #working_remotely .container .column_container .col {
-    width: 100%;
-    float: none;
-  }
-  .main-content #working_remotely .container .column_container .col img {
-    width: 150px;
-    height: auto;
-  }
-  .main-content #working_remotely .container .column_container .col h5 {
-    margin-top: 36px;
-  }
-  .main-content #working_remotely .container .column_container .col + .col {
-    margin-left: auto;
-    margin-top: 64px;
+  .main-content .c-logo-grid .container .grid > div .clients-logo-square img {
+    width: 200px;
+    max-width: 90%;
+    margin: auto;
   }
   #contact .container h2 {
     overflow: visible;

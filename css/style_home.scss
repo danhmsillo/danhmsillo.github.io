@@ -203,7 +203,28 @@ a, .btn, input, button {
 			position: relative;
 			z-index: 4;
 			margin-top: -50px;
-			h2{
+      .h6-hero-descriptive{
+        color: $neutral1;
+        font-family: "MonumentExtended", sans-serif;
+        font-size: 0.82rem;
+        position: relative;
+        font-weight: 800;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        @media screen and (max-width:1440px) {
+          font-size: 0.82rem;
+        }
+        @media screen and (max-width:768px) {
+          font-size: 1px;
+        }
+        @media screen and (max-width:640px) {
+          font-size: 8.3px;
+          letter-spacing: 2px;
+        }
+      }
+			h1{
 				font-size: 4vw;
 				font-weight: bold;
 				font-style: normal;
@@ -214,6 +235,8 @@ a, .btn, input, button {
 				font-family: $accent-font;
 				letter-spacing: -1.3px;
 				text-align: left;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
 			}
 		}
     .cta_container{
@@ -299,7 +322,6 @@ a, .btn, input, button {
 					outline: 0;
 					font-weight:500;
 					font-size: 0.9vw;
-					letter-spacing: 0.32em;
 					color: $accent-color;
 					@include transition;
 					transition-property: color;
@@ -1298,7 +1320,7 @@ a, .btn, input, button {
 	#hero{
 		.container{
       .text_middle{
-        h2{
+        h1{
           font-size: 3.6vw;
           line-height: 1.2;
         }
@@ -1374,11 +1396,11 @@ a, .btn, input, button {
 				margin-top: 0;
 			}
 			.social{
-				right: -21px;
-				bottom: 70px;
+				//right: -21px;
+				//bottom: 70px;
 				li{
 					a{
-						font-size: 10px;
+						font-size: 14px;
 						letter-spacing: 2.7px;
 					}
 				}
@@ -1490,7 +1512,7 @@ a, .btn, input, button {
 			.text_middle {
 				width: 100%;
 				padding-top: 146px;
-				h2{
+				h1{
 					font-size: 9.8vw;
 				}
 			}
@@ -1593,7 +1615,7 @@ a, .btn, input, button {
 			.text_middle {
 				padding-top: 146px;
         width: 90%;
-				h2{
+				h1{
 					font-size: 20px;
 					line-height: 1;
 					letter-spacing: -1.2px;
@@ -1633,9 +1655,9 @@ a, .btn, input, button {
         }
       }
       .social{
-        right: -208px;
-        top:0;
-        bottom: 400px;
+        right: -40px;
+        top:200px;
+        //bottom: 400px;
         li{
           a{
             font-size: 14px;
@@ -1751,39 +1773,32 @@ a, .btn, input, button {
 				}
 			}
 		}
-		#working_remotely{
-			background-position-y: 40px; 
-			.container{
-				padding-top: 70px;
-				padding-bottom: 80px;
-				h4{
-					font-size: 48px;
-				}
-				p{
-					padding-top: 51px;
-					max-width: 100%;
-				}
-				.column_container{
-					max-width: 100%;
-					margin-top: 48px;
-					.col{
-						width: 100%;
-						float: none;
-						img{
-							width: 150px;
-							height: auto;
-						}
-						h5{
-							margin-top: 36px;
-						}
-					}
-					.col + .col{
-						margin-left: auto;
-						margin-top: 64px;
-					}
-				}
-			}
-		}
+    #clients{
+      .container{
+        padding-top: 9rem;
+      }
+    }
+		.c-logo-grid{
+      .container{
+        padding-bottom: 12rem;
+        .grid{          
+            > div{
+              width: 25%;
+              .clients-logo-square{
+                padding: 0.8rem;
+                margin: 0;
+                img{
+                  width: 200px;
+                  max-width: 90%;
+                  //height: 80px;
+                  margin: auto;
+
+                }
+              }
+            }
+        }
+      }  
+    }
 	}
 
 	#contact{

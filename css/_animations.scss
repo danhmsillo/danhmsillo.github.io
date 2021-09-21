@@ -439,9 +439,9 @@ opacity: 1;
         display: block;
         position: relative;
         top: 0;
-        height: 2vw;
+        height: 3vw;
         overflow: hidden;
-        margin-bottom: 2.8%;
+        margin-bottom: 8.8%;
         ~ .item_2 {
         display: inline-block;
         opacity: 0;
@@ -489,9 +489,9 @@ opacity: 1;
         display: block;
         position: relative;
         top: 0;
-        height: 2vw;
+        height: 3vw;
         overflow: hidden;
-        margin-bottom: 2.8%;
+        margin-bottom: 6.8%;
         ~ .item_2 {
         display: inline-block;
         opacity: 0;
@@ -760,10 +760,7 @@ opacity: 1;
   /***************
     Page CONTACT
   ****************/
-  .img-contact{
-    max-width: 70%;
-    margin-top: -12rem;
-  }
+
   #services_{
     .container{
       .mask{

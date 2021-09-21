@@ -420,7 +420,7 @@ a:focus, a:hover{
                     max-width: 160px;
                     margin: auto;
                     position: absolute;
-                    bottom: 64px;
+                    bottom: 204px;
                     left: 50%;
                     min-height: 24px;
                     overflow: hidden;
@@ -932,7 +932,7 @@ PAGE NOSOTROS ABOUT
     #machinery_about{
       .container{
         text-align: center;
-        padding-bottom: 44rem;
+        padding-bottom: 18rem;
         .machinery-features{
           margin-top: 6%;
           display: flex;
@@ -1154,6 +1154,11 @@ PAGE CONTACTO CONTACT
 ****************/
 #contact-page{
   #stats{
+    .img-contact{
+      max-width: 70%;
+      margin-top: 4rem
+      //margin-top: -12rem;
+    }
     @include block;
     position: relative;
     //padding-top: 10%;
@@ -1161,6 +1166,7 @@ PAGE CONTACTO CONTACT
     background-color: $neutral6;
     .container{
       padding-bottom: 1%;
+      padding-top: 9.2%;
       h2{
         color: white;
         font-family: $accent-font;
@@ -1269,7 +1275,7 @@ PAGE CONTACTO CONTACT
           }
           .contact__person-mail{
             a{
-              font-size: 0.8vw;
+              font-size: 1.4rem;
               font-family: $base-font;
               font-weight: normal;
               font-style: normal;
@@ -2225,6 +2231,11 @@ PAGES MEDIA QUERIES
           }
         }
       }
+    }
+  }
+  #machinery_about{
+    .container{
+      padding-bottom: 4rem !important;
     }
   }
   #projects-page{
