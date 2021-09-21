@@ -634,13 +634,32 @@ opacity: 1;
 /***************
     NOSOTROS ABOUT
   ****************/
-  #about-page{
-    .main-content{
-      #about{
-        .container{ 
+  #about{
+    #about-page{
+      #about-page__content{
+        .container{
           .mask{
-            margin-bottom: 1.6%;
-          } 
+            width: 100%;
+            display: block;
+            position: relative;
+            top: 0;
+            height: 1vw;
+            overflow: hidden;
+            margin-bottom: 5.6%;
+            //padding: 0 0 0 55px;
+            ~ .item_2 {
+            display: inline-block;
+            opacity: 0;
+            @include prefixonprop(transform, translateY(6%));		
+            }
+            &[data-position="up"].viewed ~ .item_2{
+            @include prefixonprop(transform, translateY(0));
+            transition: transform(cubic-bezier(.25,.1, -.1,1)), opacity 0.6s;
+            transition-duration: 1.2s;
+            opacity: 1;
+            transition-delay: 0.4s;
+            }
+          }
         }
       }
       #stats{
@@ -688,13 +707,63 @@ opacity: 1;
           }
         }
       }
+      #machinery_about{
+        .container{
+          .mask{
+            width: 100%;
+            display: block;
+            position: relative;
+            top: 0;
+            height: 1vw;
+            overflow: hidden;
+            margin-bottom: 2.8%;
+            //padding: 0 0 0 55px;
+            ~ .item_2 {
+            display: inline-block;
+            opacity: 0;
+            @include prefixonprop(transform, translateY(6%));		
+            }
+            &[data-position="up"].viewed ~ .item_2{
+            @include prefixonprop(transform, translateY(0));
+            transition: transform(cubic-bezier(.25,.1, -.1,1)), opacity 0.6s;
+            transition-duration: 1.2s;
+            opacity: 1;
+            transition-delay: 0.4s;
+            }
+          }
+          .column_container{
+            display: block;
+            margin-top: 2.7%;
+            &:after{
+              @include clear_fix;
+            }
+            .row{
+              .col{
+                .fadein{
+                  display: block;
+                }
+              }
+            }
+          }
+          @for $i from 3 through 12{	
+            .item_#{$i}{
+              transition-delay: 0.1s + ($i / 9);
+            }
+          }
+        }
+      }
     }
-    
+
   }
+
 
   /***************
     Page CONTACT
   ****************/
+  .img-contact{
+    max-width: 70%;
+    margin-top: -12rem;
+  }
   #services_{
     .container{
       .mask{
@@ -776,7 +845,7 @@ opacity: 1;
   /***************
     Page Service Each
   ****************/
-  #service-each-paragraph{
+  .service-each-paragraph{
     .container{
       .mask{
         width: 100%;
@@ -822,54 +891,58 @@ opacity: 1;
       }
     }
   }
-  .service-each__info{
-    .container{
-      .mask{
-        width: 100%;
-        display: block;
-        position: relative;
-        top: 0;
-        height: 1vw;
-        overflow: hidden;
-        margin-bottom: 5.6%;
-        //padding: 0 0 0 55px;
-        ~ .item_2 {
-        display: inline-block;
-        opacity: 0;
-        @include prefixonprop(transform, translateY(6%));		
+  .service-each__info-section{
+    padding: 10% 0 12%;
+    .service-each__info{
+      .container{
+        .mask{
+          width: 100%;
+          display: block;
+          position: relative;
+          top: 0;
+          height: 1vw;
+          overflow: hidden;
+          margin-bottom: 5.6%;
+          //padding: 0 0 0 55px;
+          ~ .item_2 {
+          display: inline-block;
+          opacity: 0;
+          @include prefixonprop(transform, translateY(6%));		
+          }
+          &[data-position="up"].viewed ~ .item_2{
+          @include prefixonprop(transform, translateY(0));
+          transition: transform(cubic-bezier(.25,.1, -.1,1)), opacity 0.6s;
+          transition-duration: 1.2s;
+          opacity: 1;
+          transition-delay: 0.4s;
+          }
         }
-        &[data-position="up"].viewed ~ .item_2{
-        @include prefixonprop(transform, translateY(0));
-        transition: transform(cubic-bezier(.25,.1, -.1,1)), opacity 0.6s;
-        transition-duration: 1.2s;
-        opacity: 1;
-        transition-delay: 0.4s;
-        }
-      }
-      .column_container{
-        display: block;
-        margin-top: 2.7%;
-        &:after{
-          @include clear_fix;
-        }
-        .row{
-          .col{
-            .fadein{
-              display: block;
+        .column_container{
+          display: block;
+          margin-top: 2.7%;
+          &:after{
+            @include clear_fix;
+          }
+          .row{
+            .col{
+              .fadein{
+                display: block;
+              }
             }
           }
         }
-      }
-      @for $i from 3 through 5{	
-        .item_#{$i}{
-          transition-delay: 0.1s + ($i / 5);
+        @for $i from 3 through 5{	
+          .item_#{$i}{
+            transition-delay: 0.1s + ($i / 5);
+          }
         }
       }
-    }
-    .mask-fadein.animBlock[data-position="in"]{
-      display: block;
+      .mask-fadein.animBlock[data-position="in"]{
+        display: block;
+      }
     }
   }
+  
   .see-projects_cta{
     .container{
       .mask{

@@ -159,13 +159,12 @@ h2,h3,h4,h5{
 h2{
 	font-weight: bold;
 	font-size: 67px;
-	letter-spacing: -1px;
 	line-height: 77px;
 }
 
 h6{
   font-family: $accent-font;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   position: relative;
   font-weight: 800;
   font-style: normal;
@@ -597,103 +596,6 @@ a:focus, a:hover{
 /***************
     END HERO
 ****************/
-/***************
-     FOOTER 
-****************/
-/*
-#footer{
-    @include block;
-    background-color: $neutral6;
-    //position: absolute;
-    bottom: 0;
-    .container{
-        padding: 4% 50px 6%;
-        max-width: 100%;
-        &:after{
-            @include clear_fix;
-        }
-        .column_container{
-          .logo{
-            //float: left;
-            display:inline-block;
-            margin:10px auto
-          }
-          
-          .footer__contact-info{
-            p{
-            font-family: $base-font;
-            font-size: 1.4rem;
-            line-height: 1.2;
-            color: $neutral3;
-            margin-bottom: 1.4rem;
-            }
-          }
-          .location-link{
-            display:block;
-            letter-spacing:0;
-            margin:28px auto 0;
-            text-decoration:none;
-            a{
-              font-size: 1rem;
-              color: $neutral3 ;
-              display:inline-block;
-              padding-left:21px;
-              position:relative;
-              font-family: $accent-font;
-              text-transform: uppercase;
-              font-weight: normal;
-              font-style: normal;
-              font-stretch: normal;
-              line-height: 1.7;
-              letter-spacing: 2px;
-              &:before{
-                background:transparent url(/img/placeholder.svg) no-repeat 50%/9px 12px;
-                content:"";
-                color: blue;
-                margin:auto 0;
-                width:20px;
-                height:30px;
-                opacity: 1;
-                top:0;
-                bottom:0;
-                left:0;
-                position:absolute;
-                transition:opacity .15s cubic-bezier(.77,0,.175,1)
-              }
-              &:hover{
-                color: $accent-color-shade3;
-              }
-            }
-          }
-          .nav-footer{
-            #footer-menu{
-              padding: 8rem 6rem;
-              .footer-menu-item{
-                a{
-                  font-family: $accent-font;
-                  font-size: 1.2rem;
-                  color: $neutral3;
-                  text-transform: uppercase;
-                  transition:.15s cubic-bezier(.77,0,.175,1);
-                  &:hover{
-                    color: $accent-color-shade3;
-                  }
-                  
-                }
-              }
-            }
-          }
-          .social{
-            margin-top: 7.75rem;
-          }
-        }
-      }    
-    }
-  
-    */
-   
-
-/*************** END FOOTER ****************/
 
 @media only screen and (max-width : 1440px) {
     #wrapper_header {
@@ -846,41 +748,7 @@ a:focus, a:hover{
         }
       }
     }
-    /*
-    .footer{
-        .container{
-            text-align: center;
-            padding-bottom: 64px;
-            >p{
-                display: block;
-                width: 100%;
-                text-align: center;
-                margin-top: 19px;
-                font-size: 14px;
-                float: none;
-            }
-            .social{
-                margin-top: 24px;
-                display: inline-block;
-                float: none;
-            }
-        }
-    }
-    */
-
-    /*****NOSOTROS ABOUT*****/
-    #about-page{
-      .main-content{
-        #wrapper-hero{
-          #about-hero{
-            .hero-title{
-              font-size: 10px;
-            }
-          }
-        }
-      }
-    }
-
+    
 }
 
 
@@ -1010,13 +878,20 @@ End Cover
 /***************
 PAGE NOSOTROS ABOUT   
 ****************/
-  #about-page{    
+#about{
+  .wrapper-hero{
+    .page-hero{
+      background-position: 50% 100%;
+    }
+  }
+  #about-page{
+    background-color: $neutral1;
     #about-page__content{
       background-color: $neutral5-secondary-color;
       .container{
         text-align: center;
         padding-top: 10%;
-			  padding-bottom: 20%;
+        padding-bottom: 20%;
         display: flex;
         justify-content: center;
         .col{
@@ -1033,6 +908,7 @@ PAGE NOSOTROS ABOUT
   
     #stats{
       .container{
+        padding-top: 0%;
         .col{
           .img-about{
             margin: 6rem 0 4rem 0;
@@ -1053,12 +929,126 @@ PAGE NOSOTROS ABOUT
         }
       }
     }
-    #clients{
+    #machinery_about{
       .container{
         text-align: center;
+        padding-bottom: 44rem;
+        .machinery-features{
+          margin-top: 6%;
+          display: flex;
+          ul{
+            align-items:flex-start;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            li{
+              display:inline-block;
+              flex:0 0 30%;
+              margin-bottom:8rem;
+              padding-right:40px;
+              width:50%;
+              &:nth-last-of-type(-n+2) {
+                margin-bottom:0!important
+               }
+              .machine_name{
+                font-family:$accent-font;
+                color: $neutral5-secondary-color;
+                font-size:calc(10px + 3 * ((100vw - 420px) / 860));
+                line-height:1em;
+                display:block;
+                font-weight:700;
+                
+                text-transform:uppercase;
+               }
+              .machine_label{
+                font-size:calc(.875rem + 3 * ((100vw - 26.25rem) / 860));
+                line-height:1.625em;
+                color: $neutral3;
+                display: block;
+                padding-top:16px;
+                overflow:hidden;
+                position:relative;
+                &:before {
+                  background: $accent-color;
+                  content:"";
+                  display:block;
+                  text-align: center;
+                  position:relative;
+                  width:30px;
+                  height:1px;
+                  margin: 0 auto;
+                }
+              }
+            }
+          }
+        } 
       }
     }
+
+  }
 }
+
+#machinery-list-page{
+  .machinery-list{
+    .container{
+      margin-top: 9%;
+      margin-bottom: 12%;
+      .list-top_name{
+        
+        display: block;
+        font-family:$accent-font;
+        color: $neutral5-secondary-color;
+        font-size:calc(40px + 20 * ((100vw - 420px) / 860));
+        line-height:1em;
+      }
+      .list-top_value{
+        
+        display: block;
+        text-transform:uppercase;
+        font-family: $base-font;
+        color: $neutral5-secondary-color;
+        font-size:calc(.875rem + 3 * ((100vw - 26.25rem) / 860));
+        margin-bottom: 5rem;
+        &:before {
+          background: $accent-color;
+          content:"";
+          display:block;
+          top: 67px;
+          bottom: 0;
+          //left:0;
+          position:absolute;
+          width:30px;
+          height:1px
+        }
+      }
+      .machinery-list__list{
+        .machinery-list__item{
+          margin-bottom: 3rem;
+          .machinery-list__name{
+            display:block;
+            //font-size: 1.1rem;
+            font-family: $accent-font;
+            
+            //font-family: $base-font;
+            //font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            line-height:1.8rem;
+          }
+          .machinery-list__info{
+            display:block;
+            font-size: 1rem;
+            font-family: $base-font;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: $neutral3;
+          }
+        }
+      }
+    }
+  }
+}
+  
 
 .img-translate-up{
   width: 100%;
@@ -1102,6 +1092,7 @@ PAGE PROYECTOS PROJECTS
     position: relative;
     background-color: $neutral1;
     .container{
+      padding-top: 9.2%;
       .projects-list{
         align-items: flex-start;
         flex-wrap: wrap;
@@ -1116,7 +1107,9 @@ PAGE PROYECTOS PROJECTS
         width: 100%;
         max-width: 60vw;
         min-width: 300px;
-        margin: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 10rem;
+        //margin: 2rem 0 10rem;
         font-size: 1rem;
         text-decoration: none;
         overflow: hidden;
@@ -1128,7 +1121,8 @@ PAGE PROYECTOS PROJECTS
             box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
           }
           .card-image{
-            max-height: 412px;
+            max-height: 600px;
+            min-height: 60rem; /* layout hack */
           }
           .card-description {
             display: block;
@@ -1136,11 +1130,10 @@ PAGE PROYECTOS PROJECTS
             color: $neutral5-secondary-color;
             text-decoration: none;
             .client {
-              font-family: $base-font;
-              font-size: 1rem;
+              font-size: 0.9rem;
               margin: 0 0 1.2rem;
             }
-            span {
+            .project_title {
               font-family: $accent-font;
               font-size: 1.5rem;
               text-transform: uppercase;
@@ -1168,8 +1161,17 @@ PAGE CONTACTO CONTACT
     background-color: $neutral6;
     .container{
       padding-bottom: 1%;
-      h3{
+      h2{
         color: white;
+        font-family: $accent-font;
+        text-transform: uppercase;
+        // Respond to viewport width–works well since
+        // we're sizing the image according viewport height
+        font-size: 2.2vw; 
+        line-height: 1.1;
+        margin: 60px 0;
+        text-align: left;
+        //width: 50%;
       }
     } 
   }
@@ -1351,7 +1353,7 @@ SERVICE EACH SERVICIO INDIVIDUAL
     // needed to prevent janky scrolling in Safari
     backface-visibility: hidden;
     //100% height of the viewport
-    height: 30vh;
+    height: 56vh;
     //overflow: hidden;
     position: relative;
     width: 100%;
@@ -1361,6 +1363,7 @@ SERVICE EACH SERVICIO INDIVIDUAL
       background-position: 50% 0;
     }
     // Add a slight overlay on our image
+    /*
     &:after {
       background-color: rgba(18, 20, 23, 0.8);
       bottom: 0;
@@ -1371,6 +1374,7 @@ SERVICE EACH SERVICIO INDIVIDUAL
       top: 0;
       z-index: 1;
     }
+    */
     .container {
       box-sizing: border-box;
       padding-top: 20vh;
@@ -1394,6 +1398,7 @@ SERVICE EACH SERVICIO INDIVIDUAL
       color: $accent-color-shade3;
     }
     .hero-title {
+      text-align: center;
       color: white;
       font-family: $accent-font;
       text-transform: uppercase;
@@ -1417,23 +1422,25 @@ SERVICE EACH SERVICIO INDIVIDUAL
   } 
 }
 
-.service-page-cover-img{
-  margin-top: 10rem;
-  //width: 100%;
-  @include prefixonvalue(transform, translatey(60%));
-  z-index: 333;
-  img{
-    width: 100%;
-   @include prefixonvalue(transform, translatey(-30%));
+.service-each__hero-img{
+  @include prefixonvalue(transform, translatey(-20%));
+  .container{
+    width: 80%;
+    img{
+      //margin-top: 5rem;
+      width: 100%;
+    }
   }
 }
+
+
 
 .service__cover-paragraph{
   display: block;
   font-family: $accent-font;
   text-transform: uppercase;
   color: $neutral5-secondary-color;
-  font-size: 2.8rem;
+  font-size: 2.401rem;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -1464,6 +1471,25 @@ SERVICE EACH SERVICIO INDIVIDUAL
   }
 }
 
+.service-each-paragraph{
+  background-color: white;
+  .container{
+    text-align: center;
+    //padding-top: 10%;
+    //padding-bottom: 20%;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    .col{
+      padding: 0 28%;
+      p{
+        //width: 80%;
+        
+      }
+    } 
+  }
+}
+
 
 #service-automation-page{
   #service-automation{
@@ -1471,24 +1497,7 @@ SERVICE EACH SERVICIO INDIVIDUAL
     position: relative;
     background-color: darkcyan;
   }
-  .service-each-paragraph{
-    background-color: white;
-    .container{
-      text-align: center;
-      padding-top: 10%;
-      //padding-bottom: 20%;
-      padding-bottom: 10%;
-      display: flex;
-      justify-content: center;
-      .col{
-        padding: 0 30%;
-        p{
-          //width: 80%;
-          
-        }
-      } 
-    }
-  }
+  
   .c-logo-grid{
     .container{
       .grid{
@@ -1535,18 +1544,48 @@ SERVICE EACH SERVICIO INDIVIDUAL
     padding-top: 4rem;
     padding-bottom: 4rem;
     position: relative;
-    h3{
-      color: $neutral6;
-      font-size: 0.9vw;
-    }  
   }
 }
+
+.service-each__subtitle{
+  font-size: 2.02rem;
+  color: $neutral6;
+}
+
+
+.info__list{
+  margin-top: 2rem;
+  .info__list-item{
+    color: $neutral3;
+    font-family: $base-font;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    padding: 1rem 0;
+    text-indent: -3.5rem;
+    margin-left: 3.5rem;
+    &:before {
+      content:"";
+      background: $accent-color;
+      display: inline-block;
+      margin-right: 0.75rem;
+      vertical-align: middle;
+      width:28px;
+      height:1px;
+    }
+  }
+}
+  
+
+
 .service-each__img{
   width: 100%;
   margin: 0;
-  height: 50vh;
-  min-height: 50vh;
-  max-height: 60vh;
+  height: 60vh;
+  min-height: 60vh;
+  max-height: 70vh;
   background: gray;
     background-position-x: 0%;
     background-position-y: 0%;
@@ -1705,7 +1744,7 @@ PROJECT EACH PROYECTO INDIVIDUAL
         padding:0 16px;
         border-right:1px solid $neutral4;
         .project__tag {
-          width:27.95%;
+          width:39%;
           padding:0 10px 0 9.9%;
           .project__tag__name {
             font-size:10px;   
@@ -1851,6 +1890,16 @@ PAGES MEDIA QUERIES
 ****************
 ****************  
 ****************/
+@media only screen and (max-width : 1640px){
+  /*****SERVICE EACH*****/
+  .service-each-paragraph{
+    .container{
+      .col{
+        padding: 0 18%;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width : 1440px){
     
@@ -1870,10 +1919,26 @@ PAGES MEDIA QUERIES
       }
     }
   }
-
-  
   /*****NOSOTROS ABOUT*****/
 
+  /*****PROYECTS*****/
+  #projects-page{
+    #projects{
+      .container{
+        .projects-list{
+          .card{
+            .card-image{
+              min-height: 45rem; /* layout hack */
+              max-height: 450px;
+            }
+            .project_title{
+              font-size: 1.33rem;
+            }
+          }
+        }
+      } 
+    }
+  } 
   /*****SERVICES*****/
   #services_ {
     .container {
@@ -1889,10 +1954,72 @@ PAGES MEDIA QUERIES
       }
     }
   }
-    
+
+  /*****SERVICE EACH*****/
+  .wrapper-hero__service-each{
+    .page-hero{
+      .container{
+        .hero-title{
+          font-size: 3.4rem;
+          margin: 40px 10%;
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .service-each-paragraph{
+    .container{
+      .col{
+        padding: 0 18%;
+        .service__cover-paragraph{
+          font-size: 2.32rem;
+        }
+      }
+    }
+  }
+
+  .service-each__subtitle{
+    font-size: 1.94rem;
+  }
+  
   
 }
+
 @media only screen and (max-width : 960px) {
+  #about{
+    #about-page{
+      #about-page__content{
+        .container{
+          .col{
+            h3{
+              font-size: 1.8rem;
+              width: 100%;
+            }
+          }
+        } 
+      }
+      #stats{
+        .container{
+          padding-top: 5%;
+        }
+      } 
+    } 
+  }
+  #projects-page{
+    #projects{
+      .container{
+        .projects-list{
+          .card{
+            .card-image{
+              min-height: 35rem; /* layout hack */
+              max-height: 350px;
+            }
+          }
+        }
+      } 
+    }
+  }  
   #services_{
     .container{
       h6{
@@ -1919,12 +2046,36 @@ PAGES MEDIA QUERIES
       }
     }
   }
+  .wrapper-hero__service-each{
+    .page-hero{
+      .container{
+        .hero-title{
+          font-size: 3.3rem;
+          margin: 40px 5%;
+          width: 90%;
+        }
+      }
+    }
+  }
+  .service-each-paragraph{
+    .container{
+      .col{
+        padding: 0 8%;
+        .service__cover-paragraph{
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  
+  .service-each__subtitle{
+    font-size: 1.81rem;
+  }
+  
 }
 
 
 @media only screen and (max-width : 768px) {
- 
-  
   .wrapper-hero{
     .page-hero{
       .container{
@@ -1942,11 +2093,39 @@ PAGES MEDIA QUERIES
       }
     }
   }
-  
+  #about{
+    #about-page{
+      #about-page__content{
+        .container{
+          .col{
+            h3{
+              font-size: 1.6rem;
+              width: 100%;
+            }
+          }
+        } 
+      } 
+    } 
+  } 
+  #projects-page{
+    #projects{
+      .container{
+        .projects-list{
+          margin-left: 5px;
+          .card{
+            max-width: 70vw;
+            margin-bottom: 5rem;
+            //margin: 2rem 0 10rem;
+            .card-image{
+              //min-height: 55rem; /* layout hack */
+              //max-height: 550px;
+            }
+          }
+        }
+      } 
+    }
+  } 
   /*****NOSOTROS ABOUT*****/
-
-  /*****NOSOTROS ABOUT*****/
-
   #services_{
     .container{
       padding-top: 80px;
@@ -1974,6 +2153,25 @@ PAGES MEDIA QUERIES
     }
   }
 
+  .wrapper-hero__service-each{
+    .page-hero{
+      .container{
+        .hero-title{
+          font-size: 3rem;
+          margin: 40px 5%;
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  
+  .service-each__subtitle{
+    font-size: 1.74rem;
+  }
+  
+  
+  
 }
   
 
@@ -1992,7 +2190,6 @@ PAGES MEDIA QUERIES
     .page-hero{
       .container{
         padding-top: 30vh;
-        
         .p-cover{
           font-size: 1.4rem;
           line-height: 2.3rem;
@@ -2001,9 +2198,52 @@ PAGES MEDIA QUERIES
       }
     }
   }
+
     
   /*****NOSOTROS ABOUT*****/
-
+  #about{
+    #about-page{
+      #about-page__content{
+        .container{
+          .col{
+            h3{
+              font-size: 1.3rem;
+              width: 100%;
+            }
+          }
+        } 
+      } 
+    } 
+  } 
+ 
+  #about-page{
+    .main-content{
+      #wrapper-hero{
+        #about-hero{
+          .hero-title{
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+  #projects-page{
+    #projects{
+      .container{
+        .projects-list{
+          margin-left: 5px;
+          .card{
+            max-width: 80vw;
+            //margin: 2rem 0 10rem;
+            .card-image{
+              //min-height: 55rem; /* layout hack */
+              //max-height: 550px;
+            }
+          }
+        }
+      } 
+    }
+  } 
   /*****SERVICIOS SERVICES*****/
   #services_{
     .container{
@@ -2033,11 +2273,21 @@ PAGES MEDIA QUERIES
   }
 
   .wrapper-hero__service-each{
-    .page-hero{ 
-      .hero-title{
-        font-size: 2rem;
+    .page-hero{
+      height: 60vh;
+      .container{
+        padding-top: 30vh;
+        .hero-title{
+          font-size: 2.2rem;
+          margin: 30px 0;
+          width: 100%;
+        }
       }
     }
+  }
+
+  .service-each__hero-img{
+    @include prefixonvalue(transform, translatey(-30%));
   }
 
   .service-each__cover-img__container{
@@ -2051,7 +2301,7 @@ PAGES MEDIA QUERIES
       padding-top: 6rem;
       .container{
         .col{
-          padding: 0 0;
+          padding: 0 5%;
         }
       }
     }
@@ -2082,6 +2332,10 @@ PAGES MEDIA QUERIES
   }
   .service-each__info .container h3{
     font-size: 1.45rem;
+  }
+
+  .service-each__subtitle{
+    font-size: 2rem;
   }
 
 

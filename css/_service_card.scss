@@ -35,8 +35,6 @@
 
 	.card__image-container {
 		max-height: 10rem; /* Stop the image getting too big */
-
-	
 		background-size: cover; /* Force the background image to cover the container */
 		background-position: center center; /* Position the image in the middle */
 	}
@@ -88,9 +86,30 @@
     color: white;
     font-family: $accent-font;
     text-transform: uppercase;
-    font-size: 1.6rem;
+    font-size: 1.35rem;
+    letter-spacing: 1.3px;
     line-height: 1.2;
     padding: 1rem 0;
+    text-indent: -3.5rem;
+    margin-left: 3.5rem;
+    &:before {
+      content:"";
+      background: $accent-color;
+      display: inline-block;
+      margin-right: 0.75rem;
+      vertical-align: middle;
+      width:28px;
+      height:1px;
+    }
+    .card__list-description{
+      display: block;
+      font-family: $base-font;
+      //text-transform: initial;
+      //letter-spacing: 0;
+      font-size: 1.2rem;
+      margin-left: 3.5rem;
+      line-height: 1.4;
+    }
   }
 
   

@@ -106,6 +106,10 @@ a, .btn, input, button {
   }
 }
 
+.disabled{
+  color: $neutral2 !important;
+}
+
 .arrow {
   border: solid $accent-color;
   border-width: 0 2px 2px 0;
@@ -341,8 +345,21 @@ a, .btn, input, button {
 				color: $neutral6;
 
 			}
-      .img-video-corp{
-        padding-top: 14%;
+      
+      .video-corp{
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0px;
+        iframe{
+         // position: absolute;
+          //left: 0px;
+          //right: 0px;
+          //top: 0px;
+          //bottom: 0px;
+          //height: 100%;
+          //width: 100%;
+        }
       }
 			&:after{
 				content: "";
@@ -471,7 +488,7 @@ a, .btn, input, button {
 	****************/
   .slider{
     position: relative;
-    height: 60vh;
+    //height: 60vh;
     background-color: transparent;
     .swiper-container {
     width: 100%;
@@ -572,7 +589,6 @@ a, .btn, input, button {
               text-transform:uppercase
              }
             .label-stat{
-              font-size:calc(14px + 3 * ((100vw - 420px) / 860));
               font-size:calc(.875rem + 3 * ((100vw - 26.25rem) / 860));
               line-height:1.625em;
               color: $neutral3;
@@ -752,32 +768,41 @@ a, .btn, input, button {
   
   @media (max-width: 899.98px) {
 
-    .front-industries {
-      margin-top: 0;
-      padding: 4.4444444444rem 0 0;
-
-      &:before {
-        display: none;
-      }
-
-      .nav-industries {
-        position: relative;
-        margin-top: 4.4444444444rem;
-        padding: 3rem 0;
+    #services_hover{
+      .front-industries {
+        margin-top: 0;
+        padding: 4.4444444444rem 0 0;
 
         &:before {
-          content: '';
-          position: absolute;
-          top: 0;
-          height: 0;
-          left: -100vw;
-          right: -100vw;
-          background: #000;
-          -webkit-transition: height 0.75s ease;
-          transition: height 0.75s ease;
+          display: none;
+        }
+
+        .industries-text{
+          p{
+            width: 100%;
+          }
+        }
+
+        .nav-industries {
+          position: relative;
+          margin-top: 4.4444444444rem;
+          padding: 3rem 0;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 0;
+            left: -100vw;
+            right: -100vw;
+            background: #000;
+            -webkit-transition: height 0.75s ease;
+            transition: height 0.75s ease;
+          }
         }
       }
     }
+    
     
     .front-industries .nav-industries ul li a + div {
       width: 100vw;
@@ -894,7 +919,7 @@ a, .btn, input, button {
     .card-image {
       display: block;
       //min-height: 25vh;
-      min-height: 45rem; /* layout hack */
+      min-height: 50rem; /* layout hack */
       background: #fff center center no-repeat;
       background-size: cover;
       filter: blur(3px); /* blur the lowres image */
@@ -913,6 +938,7 @@ a, .btn, input, button {
 
 
     @media (min-width: 961px){
+      
       #projects{
         .container{
           .column_container{
@@ -930,7 +956,7 @@ a, .btn, input, button {
         }
       }
       .card-image{
-        min-height: 25rem; 
+        min-height: 46rem; 
       }
     }
 
@@ -952,7 +978,7 @@ a, .btn, input, button {
         }
       }
       .card-image{
-        min-height: 30rem;
+        min-height: 40rem;
       }
     }
     @media only screen and (max-width : 795px) {
@@ -1223,7 +1249,7 @@ a, .btn, input, button {
 ****************/ 
 @media only screen and (max-width : 1440px) {
   h6{
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
   h3{
     //font-size: 1.9rem;
@@ -1339,7 +1365,7 @@ a, .btn, input, button {
     font-size: 0.83rem;
   }
   h3{
-    font-size: 2.3rem !important;
+    font-size: 2.3rem;
     width: 70%;
   }
 	#hero{
@@ -1370,13 +1396,18 @@ a, .btn, input, button {
 			.container{
 				padding-top: 104px;
 				padding-bottom: 88px;
-
 				h3{
-					font-size: 4vw;
+					font-size: 2.2rem;
 					&:nth-child(3){
 						padding-top: 50px;
 					}
 				}
+        .video-corp{
+          iframe{
+            height: 200px;
+            width: 100%;
+          }
+        } 
 			}
 		}
     .c-grid{
@@ -1415,41 +1446,8 @@ a, .btn, input, button {
 			}
 		}
     
-		#working_remotely{
-			background-size: 1130px auto;
-			background-position-y: 70px; 
-			.container{
-				h4{
-					font-size: 5vw;
-					line-height: 1;
-				}
-				p{
-					font-size: 24px;
-					line-height: 1.67;
-				}
-				.column_container{
-					max-width: 84%;
-					.col{
-						h5,p{
-							font-size: 21px;
-						}
-					}
-				}
-			}
-		}
-		#contact{
-			.container{
-				h2{
-					a{
-						font-size: 9vw;
-					}
-				}
-				p{
-					font-size: 18px;
-					margin-top: 0;
-				}
-			}
-		}
+		
+		
 	}
 
 
@@ -1458,7 +1456,7 @@ a, .btn, input, button {
 @media only screen and (max-width : 768px) {
 
   h6{
-    font-size: 12px;
+    font-size: 10px;
   }
 
 	#wrapper{
@@ -1560,9 +1558,10 @@ a, .btn, input, button {
   }
 
   h3{
-    font-size: 16px;
+    font-size: 1.9rem;
     line-height: 1.2;
     margin-bottom: 2rem;
+    width: 100%
   }
 
   p{
@@ -1587,6 +1586,7 @@ a, .btn, input, button {
     width: 3rem;
   }
 
+
 	#hero{
 		height: 100%;
 		.container {
@@ -1594,9 +1594,9 @@ a, .btn, input, button {
 				padding-top: 146px;
         width: 90%;
 				h2{
-					font-size: 40px;
+					font-size: 20px;
 					line-height: 1;
-					letter-spacing: -1.6px;
+					letter-spacing: -1.2px;
 				}
 				//.words_container{
 				//	height: 51px;
