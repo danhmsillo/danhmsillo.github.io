@@ -13,10 +13,11 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/stickymenu.js" defer></script>
 </head>
 
 <body>
-  <header class="primary-header flex">
+  <header class="primary-header header flex" id="myHeader">
     <div>
       <a href="/"><img src="/assets/img/logo.svg" alt="Logo de Dario Anelli" class="logo"></a>
     </div>
@@ -30,15 +31,13 @@
         <li><a href="/contacto.html" class="uppercase ff-sans fs-200 text-dark ">Contacto</a></li>
       </ul>
     </nav>
-    <div class="menu-wp-btn">
-      <a href="#">
+    <a href="https://wa.me/5214492768780" target="_blank">
+      <div class="menu-wp-btn">
         <div class="wp-btn bg-primary-darker-2">
-          <a href="https://wa.me/5214492768780" target="_blank">
             <img src="/assets/img/wp-btn.svg" alt="Whatsapp" class="wp-icon">
-          </a>
         </div>
-      </a>
-    </div>
+      </div>
+    </a>
   </header>
 
   <section class="bg-light-green section d-block">
@@ -49,32 +48,71 @@
     <div class="grid-container">
       <div class="mb10">
         <div class="video-card">
-          <iframe width="315" height="600" src="https://www.youtube.com/embed/dIlT8xROmJM?feature=share" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <span class="ff-serif fs-700 text-light-op d-block">Isa Vela</span>
-          <p>Certificada B2 en examen CILS</p>
+          <iframe width="315" height="600" src="https://www.youtube.com/embed/wDa14JSEd9I?feature=share" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <span class="ff-serif fs-700 text-light-op d-block">Edgar Gaytán</span>
+          <p>Ganó una beca del gobierno italiano para estudiar su maestría en Turín, Italia.</p>
         </div>
       </div>
       <div >
         <div class="video-card">
           <iframe width="315" height="600" src="https://www.youtube.com/embed/ePlUzjEEMn8?feature=share" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <span class="ff-serif fs-700 text-light-op d-block">Losh Zacarías</span>
-          <p>Certificada C2 en examen CILS</p>
+          <p>Consiguió certificación C2 en examen CILS.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="mb10">
+        <div class="video-card">
+          <iframe width="315" height="600" src="https://www.youtube.com/embed/vudT1HOcCpo?feature=share" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <span class="ff-serif fs-700 text-light-op d-block">Lucero</span>
+          <p>Tomó clases particulares para prepararse para su audición de ballet profesional en Milán, Italia.</p>
+        </div>
+      </div>
+      <div >
+        <div class="video-card">
+          <iframe width="315" height="600" src="https://www.youtube.com/embed/dIlT8xROmJM?feature=share" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <span class="ff-serif fs-700 text-light-op d-block">Isa Vela</span>
+          <p>Consiguió su certificación B2 en examen CILS.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section bg-img p-relative" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg) ;">
+  <section class="section bg-img p-relative" style="background-image: url(/assets/img/index/cta-art-img.jpg) ; background-position: top!important;">
     <div class="tinted-overlay bg-dark"></div>
     <div class="container text-center z-2 p-relative">
       <span class="uppercase ff-sans fw-semibold fs-400 letter-spacing-2 text-light-op mb1 d-block">¡Únete a nosotros!</span>
-      <h4 class="uppercase ff-serif fs-750 text-accent mb4">¿Te gustaría aprender italiano con nosotros?</h4>
+      <h4 class=" ff-serif fs-750 text-accent mb4">¿Te gustaría aprender italiano con nosotros?</h4>
       <a href="#" class="btn btn_main uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Contáctame</a>
     </div>
   </section>
 
   <footer class="section bg-dark">
-    <div class="container text-center"></div>
+    <div class="container text-center">
+      <div class="d-block footer_logo mb3">
+        <img src="/assets/img/logo-blanco.png" alt="Dario Anelli Logo">
+      </div>
+      <div class="d-block icons-wrapper mb2">
+        <a href="https://wa.me/5214492768780" target="_blank" class="icon-btn"><img src="/assets/img/icon-wp.svg" alt=""><span></span></a>
+        <a href="https://www.facebook.com/Dario-Anelli-Maestro-ditaliano-942275572531073" target="_blank" class="icon-btn"><img src="/assets/img/icon-fb.svg" alt=""><span></span></a>
+        <a href="https://www.instagram.com/darioanelliitaliano/" target="_blank" class="icon-btn"><img src="/assets/img/icon-ig.svg" alt=""><span></span></a>
+      </div>
+      <div class="footer-info d-block">
+        <div class="footer-info__item">
+          <img src="/assets/img/icon-mail_yellow.svg" alt="">
+          <span class="text-light-op">449 276 87 80</span>
+        </div>
+        <div class="footer-info__item">
+          <img src="/assets/img/icon-place_yellow.svg" alt="">
+          <span class="text-light-op">Antonio Arias Bernal 123, <br> Barrio de San Marcos, Aguascalientes, Ags.</span>
+        </div>
+        <div class="footer-info__item">
+          <img src="/assets/img/icon-wp_yellow.svg" alt="">
+          <span class="text-light-op">dario.anelli@hotmail.it</span>
+        </div>
+      </div>
+    </div>
   </footer>
   
 

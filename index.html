@@ -13,85 +13,134 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/stickymenu.js" defer></script>
 </head>
 
 <body>
-  <header class="primary-header flex">
+  <header class="primary-header header flex" id="myHeader">
     <div>
       <a href="/"><img src="/assets/img/logo.svg" alt="Logo de Dario Anelli" class="logo"></a>
     </div>
     <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
     <nav>
       <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-        <li class="active"><a href="/quienes-somos.html" class="uppercase ff-sans fs-200 text-dark ">Quiénes Somos</a></li>
+        <li><a href="/quienes-somos.html" class="uppercase ff-sans fs-200 text-dark ">Quiénes Somos</a></li>
         <li><a href="/cursos_grupales.html" class="uppercase ff-sans fs-200 text-dark ">Cursos Grupales</a></li>
         <li><a href="/clases_privadas.html" class="uppercase ff-sans fs-200 text-dark ">Clases Privadas</a></li>
         <li><a href="/reviews.html" class="uppercase ff-sans fs-200 text-dark ">Reseñas</a></li>
         <li><a href="/contacto.html" class="uppercase ff-sans fs-200 text-dark ">Contacto</a></li>
       </ul>
     </nav>
-    <div class="menu-wp-btn">
-      <a href="#">
+    <a href="https://wa.me/5214492768780" target="_blank">
+      <div class="menu-wp-btn">
         <div class="wp-btn bg-primary-darker-2">
-          <a href="https://wa.me/5214492768780" target="_blank">
             <img src="/assets/img/wp-btn.svg" alt="Whatsapp" class="wp-icon">
-          </a>
         </div>
-      </a>
-    </div>
+      </div>
+    </a>
   </header>
 
   <section class="hero section tinted-bg">
-    <div class="container text-center">
-      <h1 class="text-light ff-serif fs-900 uppercase mb3">
+    <div class="container text-center hero-title__wrapper">
+      <h1 class="text-light ff-serif fs-900 uppercase mb3 d-block">
         <span class="ff-sans fs-600 fw-semibold">Con Dario Anelli</span>
         <span class="d-block">Más que un Curso de Italiano</span>
       </h1>
-      <a href="/cursos_grupales.html" class="btn btn_main uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Empieza a aprender</a> 
+      <a href="/cursos_grupales.html" class="btn btn_main uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Busca tu curso</a> 
     </div>
   </section>
 
+  <section class="bg-dark-green p-relative lg:min-h-screen lg:flex lg:absolute lg:h-screen">
+    <div class="h-screen overflow-hidden lg:h-full">
+      <div class="flex p-relative h-full items-center lg:w-screen">
+        <!-- Foto dando clase -->
+        <div class="image-wrapper flex p-absolute" style="left: 2%; top: 5%; width: 25%; justify-content: start; transform: translate(0px, 0px);">
+          <div class="responsive-image-container intro-img">
+            <img class="intro-img__img" src="/assets/img/index/dario-anelli_1-clase.jpg" alt="" >
+          </div>
+        </div>
+        <!-- Foto Ivan -->
+        <div class="image-wrapper flex p-absolute" style="left: 0%; top: 65%; width: 20%; justify-content: start;">
+          <div class="responsive-image-container intro-img">
+            <img class="intro-img__img" src="/assets/img/index/dario-anelli_2-alumno-certificado.jpg" alt="" >
+          </div>
+        </div>
+        <!-- Foto plato de gnocchi -->
+        <div class="image-wrapper flex p-absolute" style="left: 45%; top: 3%; width: 25%; justify-content: start;">
+          <div class="responsive-image-container intro-img">
+            <img class="intro-img__img" src="/assets/img/index/dario-anelli_3-momentos.jpg" alt="" >
+          </div>
+        </div>
+        <!-- Foto online -->
+        <div class="image-wrapper flex p-absolute" style="right: 0%; top: 10%; width: clamp(35%, 10vw + 1rem, 70%); justify-content: end;">
+          <div class="responsive-image-container intro-img">
+            <img class="intro-img__img" src="/assets/img/index/dario-anelli_clase-online.jpg" alt="" >
+          </div>
+        </div>
+        <!-- Foto serata-->
+        <div class="image-wrapper flex p-absolute" style="right: 0%; top: 70%; width: clamp(35%, 10vw + 1rem, 70%); justify-content: start;">
+          <div class="responsive-image-container intro-img">
+            <img class="intro-img__img" src="/assets/img/index/dario-anelli_comunidad-tarde.jpg" alt="" >
+          </div>
+        </div>
+        <!-- Foto estudiantes certificado -->
+        <div class="image-wrapper flex p-absolute" style="left: 35%; top: 80%; width: clamp(35%, 10vw + 1rem, 70%); ">
+          <div class="responsive-image-container intro-img">
+            <img class="intro-img__img" src="/assets/img/index/dario-anelli_5-estudiantes.jpg" alt="" >
+          </div>
+        </div>
+        <!-- 6 -->
+        <!-- <div class="image-wrapper flex p-absolute" style="right: 5%; top: 8%; width: 25%; justify-content: end;">
+          <div class="responsive-image-container intro-img">
+            <img class="intro-img__img" src="/assets/img/index/dario-anelli_6-reuniones.jpg" alt="" >
+          </div>
+        </div> -->
+        <!-- 7 -->
+        <!-- <div class="image-wrapper flex p-absolute" style="left: 10%; top: 2%; width: 35%; justify-content: end;">
+          <div class="responsive-image-container intro-img">
+            <img class="intro-img__img" src="/assets/img/index/dario-anelli_7-momentos.jpg" alt="" >
+          </div>
+        </div> -->
 
-  <section class="section bg-dark-green">
-    <div class="container text-center">
-        <span class="uppercase ff-sans fw-semibold fs-400 letter-spacing-2 text-light-op mb1 d-block">Nosotros</span>
-        <p class="ff-serif fs-700 letter-spacing-1 mb3 text-light">
-          Más que un curso de italiano, somos una comunidad de personas que aman Italia y aprender sobre su lengua y su cultura. Nuestro salón está en el centro de Aguascalientes, México, pero nuestra comunidad está en todo el mundo. 
-        </p>
-      <a href="/quienes-somos.html" class="btn btn_main btn_inline_light uppercase ff-sans fw-semibold text-light fs-300">Conócenos</a>
+        <div class="container-intro-paragraph text-center">
+          <span class="uppercase ff-sans fw-semibold fs-400 letter-spacing-2 text-light-op mb1 d-block">Nosotros</span>
+          <p class="ff-serif fs-700 letter-spacing-1 mb3 text-light">
+            Más que un curso de italiano, somos una comunidad de personas que aman Italia y aprender sobre su lengua y su cultura. Nuestro salón está en el centro de Aguascalientes, México, pero nuestra comunidad está en todo el mundo. 
+          </p>
+        <a href="/quienes-somos.html" class="btn btn_main btn_inline_light uppercase ff-sans fw-semibold text-light fs-300">Conócenos</a>
+      </div>
+      </div>
     </div>
   </section>
-
 
   <section>
     <div class="grid-container bg-light-green text-mobile-center section pb16">
       <div>
         <span class="uppercase ff-sans fw-semibold fs-400 letter-spacing-2 text-light-op mb1 d-block">Quién Soy</span>
-        <h4 class="uppercase ff-serif fs-800 text-light mb2">Buongiorno! <br>
+        <h4 class="uppercase ff-serif fs-799 text-light mb2">Buongiorno! <br>
           Soy Dario Anelli</h4>
-        <p class="text-light mb2">Nací en Verona, Italia, y soy maestro de italiano desde hace más de 10 años. Confecciono mis cursos con toda mi experiencia buscando los mejores recursos didácticos para que mis alumnos puedan lograr sus objetivos de aprendizaje mientras disfrutan las clases y les enseño sobre la Italia verdadera. </p>
-        <a href="#" class="btn btn_main uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300 mb5">Descubre Más</a>
+        <p class="text-light mb2">Nací en Verona, Italia, y soy maestro de italiano desde hace más de 10 años. Diseño mis cursos de italiano con los mejores recursos para que mis alumnos logren sus objetivos de aprendizaje y, a su vez, disfruten las clases descubriendo la Italia verdadera. </p>
+        <a href="quienes-somos.html" class="btn btn_main uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300 mb5">Descubre Más</a>
       </div>
-      <div>
-        <img src="https://via.placeholder.com/310x310" alt=""/>
+      <div class="item-self-align-start">
+        <img class="offset-line-border border-light img-circle" src="/assets/img/index/dario-anelli.jpg" style="width: clamp(230px, 22vw + 1rem, 350px);" alt="Dario Anelli"/>
       </div>
     </div>
   </section>
 
-  <div class="features stack-top stack-top-mt">
-    <div class="feature bg-primary-lighter-0 offset-line-border">
+  <div class="features stack-top stack-top-mt container">
+    <div class="feature bg-primary-lighter-0 offset-line-border border-dark">
       <span class="ff-serif fs-500 d-block">Grupos Pequeños</span>
       <p class="d-block fs-300">Grupos íntimos donde todos participan y reciben atención.</p>
     </div>
-    <div class="feature bg-primary-lighter-0 offset-line-border">
+    <div class="feature bg-primary-lighter-0 offset-line-border border-dark">
       <span class="ff-serif fs-500 d-block">Más que Gramática</span>
       <p class="d-block fs-300">Aprende italiano mientras descubres la verdadera cultura italiana.</p>
     </div>
-    <div class="feature bg-primary-lighter-0 offset-line-border">
+    <div class="feature bg-primary-lighter-0 offset-line-border border-dark">
       <span class="ff-serif fs-500 d-block">Precio Accesible</span>
       <p class="d-block fs-300">Aprende sin costosas inscripciones ni mensualidades desmedidas.</p>
     </div>
-    
   </div>
 
   <!--Start Secc Cursos Actuales-->
@@ -100,128 +149,178 @@
       <div class="text-center">
         <span class="uppercase ff-sans fw-semibold fs-400 letter-spacing-2 text-dark-op">¡Únete a nosotros!</span>
         <h3 class="ff-serif fs-900 text-dark mb4">
-          Cursos Actuales
+          Cursos Abiertos
           <span class="fs-700 d-block">2022</span>
         </h3>
       </div>
       <div class="cards">
-        <!--Start Card -->
-        <div class="card-wrapper">
-          <div class="date fw-semibold text-dark uppercase bg-accent-yellow"><span>Junio 8</span></div>
-          <div class="price fw-semibold text-dark uppercase"><span class="bg-accent-yellow">2900$MXN</span></div>
-          <div class="card">
-            <div class="card__image mb1" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg);"></div>
-            <div class="card__title ff-serif fs-750 text-dark uppercase mb0_5 d-block text-center mb1">Italiano Principiante</div>
-            <div class="card__tag ff-sans fw-semibold text-dark-op d-block uppercase mb1_5 text-center"><span class="bg-primary-darker-2 tag">Presencial</span></div>
-            <div class="card__description d-block mb1_5 text-center">Los básicos que necesitas para empezar a hablar, entender y amar el italiano.</div>
-            <div class="card__horario uppercase fw-semibold d-block mb1_5 text-center">
-              <span>Horario:</span>
-              <span>Sábados 6-8 PM</span>
-            </div>
-            <div class="card__btns d-block">
-              <a href="https://docs.google.com/document/d/1ad2_ql_KtOThWSvLpSQ7Kb-9afTHdU35X1aaDEg60CA/edit?usp=sharing" class="btn btn_thin btn_inline_dark uppercase ff-sans fw-semibold text-dark fs-300" target="_blank">Saber más</a>
-              <a href="https://wa.me/5214492768780" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300" target="blank">Inscribirme</a>
-            </div>
-          </div>
-        </div>
-        <!--End Card -->
 
+        <!--Start Card -->
         
+        <div class="card-wrapper">
+            <div class="date fw-semibold text-dark uppercase bg-accent-yellow text-center"><span class="d-block lineheight-05 fs-200">Empieza</span><span>Septiembre 8</span></div>
+            <div class="price fw-semibold text-dark uppercase"><span class="bg-accent-yellow">2900$MXN</span></div>
+            <div class="card">
+              <a href="#" class="card__image mb1" style="background-image: url(/assets/img/cursos-grupales/dario_anelli_cursos_grupales_11.jpg);"></a>
+              <a href="#" class="card__title ff-serif fs-750 text-dark uppercase mb0_5 d-block text-center mb1">Italiano Principiante</a>
+              <div class="card__tag ff-sans fw-semibold text-dark-op d-block uppercase mb1_5 text-center"><span class="bg-primary-darker-2 tag">Presencial</span></div>
+              <div class="card__description d-block mb1_5 text-center">Los básicos que necesitas para empezar a hablar, entender y amar el italiano.</div>
+              <div class="card__horario uppercase fw-semibold d-block mb1_5 text-center">
+                <span>Horario:</span>
+                <span>Sábados 6-8 PM</span>
+              </div>
+              <div class="card__btns d-block">
+                <div>
+                  <a href="https://docs.google.com/document/d/1ad2_ql_KtOThWSvLpSQ7Kb-9afTHdU35X1aaDEg60CA/edit?usp=sharing" class="btn btn_thin btn_inline_dark uppercase ff-sans fw-semibold text-dark fs-300" target="_blank">Saber más</a>
+                </div>
+                <div>
+                  <a href="https://wa.me/5214492768780" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300" target="blank">Inscribirme</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <!--End Card -->
         
       </div>
     </div>
   </section>
-  
+
   <!--Start Secc Todos los cursos grupales-->
   <section class="section">
-    <div class="container text-center">
-      <span class="uppercase ff-sans fw-semibold fs-400 letter-spacing-2 text-dark-op">Todos los cursos</span>
-      <h3 class="ff-serif fs-900 text-dark mb5">Cursos Grupales</h3>
+    <div class="container-medium text-center mb5"> 
+      <span class="uppercase ff-sans fw-semibold fs-400 letter-spacing-2 text-dark-op">Busca el curso para ti</span>
+      <h3 class="ff-serif fs-900 text-dark mb3">Todos los Cursos Grupales</h3>
+      <p class=" text-dark-op">
+        ¡El curso que te interesa puede que abra pronto! No dudes en <a href="#">pedirme información</a> .
+      </p>
+    </div>
+    <div class="container text-center">  
       <div class="cg-cards">
+        <!-- Start CG-Card -->
+        <a href="#">
+          <div class="cg-card" style="background-image: url(/assets/img/cursos-grupales/dario_anelli_cursos_grupales_11.jpg);">
+            <div class="tinted-overlay bg-dark"></div>
+              <div class="cg-card__content">
+                <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
+                <a href=""><h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Italiano Principiante</h4></a>
+                <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
+                <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
+              </div>
+          </div>
+        </a>
+        <!-- End CG-Card -->
+        <!-- Start CG-Card -->
+        <a href="#">
+          <div class="cg-card" style="background-image: url(/assets/img/cursos-grupales/dario_anelli_cursos_grupales_06.jpg);">
+            <div class="tinted-overlay bg-dark"></div>
+              <div class="cg-card__content">
+                <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
+                <a href=""><h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Italiano Intermedio</h4></a>
+                <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
+                <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
+              </div>
+          </div>
+        </a>
+        <!-- End CG-Card -->
 
-        <div class="cg-card" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg);">
-          <div class="tinted-overlay bg-dark"></div>
-            <div class="cg-card__content">
-              <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
-              <h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Italiano Principiante</h4>
-              <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
-              <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
-            </div>
-        </div>
-        <div class="cg-card" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg);">
-          <div class="tinted-overlay bg-dark"></div>
-            <div class="cg-card__content">
-              <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
-              <h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Italiano Intermedio</h4>
-              <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
-              <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
-            </div>
-        </div>
-        <div class="cg-card" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg);">
-          <div class="tinted-overlay bg-dark"></div>
-            <div class="cg-card__content">
-              <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
-              <h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Italiano Avanzado</h4>
-              <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
-              <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
-            </div>
-        </div>
-        <div class="cg-card" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg);">
-          <div class="tinted-overlay bg-dark"></div>
-            <div class="cg-card__content">
-              <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
-              <h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Preparación Examen CILS</h4>
-              <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
-              <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
-            </div>
-        </div>
-        <div class="cg-card" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg);">
-          <div class="tinted-overlay bg-dark"></div>
-            <div class="cg-card__content">
-              <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
-              <h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Preparación B1 Ciudadanía</h4>
-              <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
-              <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
-            </div>
-        </div>
-        <div class="cg-card" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg);">
-          <div class="tinted-overlay bg-dark"></div>
-            <div class="cg-card__content">
-              <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
-              <h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Club de Lectura</h4>
-              <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
-              <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
-            </div>
-        </div>
-        <div class="cg-card" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg);">
-          <div class="tinted-overlay bg-dark"></div>
-            <div class="cg-card__content">
-              <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
-              <h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Literatura Italiana</h4>
-              <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
-              <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
-            </div>
-        </div>
-        <div class="cg-card" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg);">
-          <div class="tinted-overlay bg-dark"></div>
-            <div class="cg-card__content">
-              <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
-              <h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Italiano para Viajes</h4>
-              <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
-              <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
-            </div>
-        </div>
-        <div class="cg-card" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg);">
-          <div class="tinted-overlay bg-dark"></div>
-            <div class="cg-card__content">
-              <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
-              <h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Cursos para Empresas</h4>
-              <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
-              <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
-            </div>
-        </div>
-
+        <!-- Start CG-Card -->
+        <a href="#">
+          <div class="cg-card" style="background-image: url(/assets/img/cursos-grupales/dario_anelli_cursos_grupales_05.jpg);">
+            <div class="tinted-overlay bg-dark"></div>
+              <div class="cg-card__content">
+                <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
+                <a href=""><h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Italiano Avanzado</h4></a>
+                <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
+                <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
+              </div>
+          </div>
+        </a>
+        <!-- End CG-Card -->
         
+        <!-- Start CG-Card -->
+        <a href="#">
+          <div class="cg-card" style="background-image: url(/assets/img/cursos-grupales/dario_anelli_cursos_grupales_13.jpg);">
+            <div class="tinted-overlay bg-dark"></div>
+              <div class="cg-card__content">
+                <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
+                <a href=""><h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Preparación Examen CILS</h4></a>
+                <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
+                <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
+              </div>
+          </div>
+          </a>
+        <!-- End CG-Card -->
+
+        <!-- Start CG-Card -->
+        <a href="#">
+          <div class="cg-card" style="background-image: url(/assets/img/cursos-grupales/dario_anelli_cursos_grupales_10.jpg);">
+            <div class="tinted-overlay bg-dark"></div>
+              <div class="cg-card__content">
+                <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
+                <a href=""><h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Preparación B1 Ciudadanía</h4></a>
+                <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
+                <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
+              </div>
+          </div>
+          </a>
+        <!-- End CG-Card -->
+
+        <!-- Start CG-Card -->
+        <a href="#">
+          <div class="cg-card" style="background-image: url(/assets/img/cursos-grupales/dario_anelli_cursos_grupales_09.jpg);">
+            <div class="tinted-overlay bg-dark"></div>
+              <div class="cg-card__content">
+                <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
+                <a href=""><h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Club de Lectura</h4></a>
+                <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
+                <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
+              </div>
+          </div>
+          </a>
+        <!-- End CG-Card -->
+
+        <!-- Start CG-Card -->
+        <a href="#">
+          <div class="cg-card" style="background-image: url(/assets/img/cursos-grupales/dario_anelli_cursos_grupales_02.jpg);">
+            <div class="tinted-overlay bg-dark"></div>
+              <div class="cg-card__content">
+                <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
+                <a href=""><h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Literatura Italiana</h4></a>
+                <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
+                <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
+              </div>
+          </div>
+        </a>
+        <!-- End CG-Card -->
+
+        <!-- Start CG-Card -->
+        <a href="#">
+          <div class="cg-card" style="background-image: url(/assets/img/cursos-grupales/dario_anelli_cursos_grupales_03.jpg);">
+            <div class="tinted-overlay bg-dark"></div>
+              <div class="cg-card__content">
+                <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
+                <a href=""><h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Italiano para Viajes</h4></a>
+                <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
+                <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
+              </div>
+          </div>
+        </a>
+        <!-- End CG-Card -->
+
+        <!-- Start CG-Card -->
+        <a href="#">
+          <div class="cg-card" style="background-image: url(/assets/img/cursos-grupales/dario_anelli_cursos_grupales_04.jpg);">
+            <div class="tinted-overlay bg-dark"></div>
+              <div class="cg-card__content">
+                <span class="ff-sans uppercase fw-semibold fs-400 letter-spacing-2 text-accent">Curso</span>
+                <a href=""><h4 class="cg-card__title uppercase ff-serif fs-750 text-accent">Cursos para Empresas</h4></a>
+                <p class="card__description text-light">Los básicos que necesitas para empezar a hablar y entender italiano.</p>
+                <a href="/clases_privadas.html" class="btn btn_thin uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Saber Más</a>
+              </div>
+          </div>
+        </a>
+        <!-- End CG-Card -->
 
       </div>
     </div>
@@ -231,7 +330,7 @@
   <section class="stack-top stack-top-mb">
     <div class="grid-container bg-primary-lighter-0 boxed text-mobile-center section offset-line-border">
       <div>
-        <img src="https://via.placeholder.com/310x310" alt=""/>
+        <img class="offset-line-border img-circle border-dark" src="/assets/img/index/dario-anelli_clases-privadas.jpg" style="width: clamp(300px, 23vw + 1rem, 400px);" alt="Clases Privadas de Dario Anelli"/>
       </div>
       <div>
         <span class="uppercase ff-sans fw-semibold fs-400 letter-spacing-2 text-dark-op mb1 d-block">Curso a tu medida</span>
@@ -252,9 +351,9 @@
     <div class="grid-container">
       <div class="mb10">
         <div class="video-card">
-          <iframe width="315" height="600" src="https://www.youtube.com/embed/dIlT8xROmJM?feature=share" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <span class="ff-serif fs-700 text-light-op d-block">Isa Vela</span>
-          <p>Certificada B2 en examen CILS</p>
+          <iframe width="315" height="600" src="https://www.youtube.com/embed/wDa14JSEd9I?feature=share" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <span class="ff-serif fs-700 text-light-op d-block">Edgar Gaytán</span>
+          <p>Ganó una beca del gobierno italiano para estudiar su maestría en Turín, Italia.</p>
         </div>
       </div>
       <div >
@@ -267,22 +366,43 @@
     </div>
   </section>
 
-  <section class="section bg-img p-relative" style="background-image: url(/assets/img/index/bg-hero-tablet.jpg) ;">
+  <section class="section bg-img p-relative" style="background-image: url(/assets/img/index/cta-art-img.jpg) ; background-position: top!important;">
     <div class="tinted-overlay bg-dark"></div>
     <div class="container text-center z-2 p-relative">
       <span class="uppercase ff-sans fw-semibold fs-400 letter-spacing-2 text-light-op mb1 d-block">¡Únete a nosotros!</span>
-      <h4 class="uppercase ff-serif fs-750 text-accent mb4">¿Te gustaría aprender italiano con nosotros?</h4>
+      <h4 class=" ff-serif fs-750 text-accent mb4">¿Te gustaría aprender italiano con nosotros?</h4>
       <a href="#" class="btn btn_main uppercase ff-sans fw-semibold text-dark bg-accent-yellow fs-300">Contáctame</a>
     </div>
   </section>
 
   <footer class="section bg-dark">
-    <div class="container text-center"></div>
+    <div class="container text-center">
+      <div class="d-block footer_logo mb3">
+        <img src="/assets/img/logo-blanco.png" alt="Dario Anelli Logo">
+      </div>
+      <div class="d-block icons-wrapper mb2">
+        <a href="https://wa.me/5214492768780" target="_blank" class="icon-btn"><img src="/assets/img/icon-wp.svg" alt=""><span></span></a>
+        <a href="https://www.facebook.com/Dario-Anelli-Maestro-ditaliano-942275572531073" target="_blank" class="icon-btn"><img src="/assets/img/icon-fb.svg" alt=""><span></span></a>
+        <a href="https://www.instagram.com/darioanelliitaliano/" target="_blank" class="icon-btn"><img src="/assets/img/icon-ig.svg" alt=""><span></span></a>
+      </div>
+      <div class="footer-info d-block">
+        <div class="footer-info__item">
+          <img src="/assets/img/icon-mail_yellow.svg" alt="">
+          <span class="text-light-op">449 276 87 80</span>
+        </div>
+        <div class="footer-info__item">
+          <img src="/assets/img/icon-place_yellow.svg" alt="">
+          <span class="text-light-op">Antonio Arias Bernal 123, <br> Barrio de San Marcos, Aguascalientes, Ags.</span>
+        </div>
+        <div class="footer-info__item">
+          <img src="/assets/img/icon-wp_yellow.svg" alt="">
+          <span class="text-light-op">dario.anelli@hotmail.it</span>
+        </div>
+      </div>
+    </div>
   </footer>
   
-
 </body>
-
 
 
 </html>
