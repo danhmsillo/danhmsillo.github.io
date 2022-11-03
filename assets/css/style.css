@@ -72,7 +72,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -323,8 +324,6 @@ template {
 
 /*Border-box*/
 .quform-outer, .quform-outer * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1132,7 +1131,6 @@ p.quform-group-description {
 }
 
 .quform-outer-no-js .quform-success-message {
-  -webkit-border-radius: 6px;
   border-radius: 6px;
   margin: 15px 0 15px 0;
 }
@@ -1141,7 +1139,6 @@ p.quform-group-description {
   padding: 0 20px;
   border: 1px solid #ddd;
   background: #F8F8F8;
-  -webkit-border-radius: 6px;
   border-radius: 6px;
 }
 
@@ -1402,8 +1399,10 @@ input, button, textarea, select {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::after, *::before {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -1452,7 +1451,8 @@ a, a:visited, a:active {
 
 @media (min-width: 45em) {
   .grid-container {
-    column-gap: var(--container-gap, 2rem);
+    -moz-column-gap: var(--container-gap, 2rem);
+         column-gap: var(--container-gap, 2rem);
     grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
   }
   .grid-container > *:first-child {
@@ -1771,6 +1771,7 @@ body {
   color: hsl(var(--dark)/0.8);
   min-height: 100vh;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr;
   grid-template-rows: min-content 1fr;
   overflow-x: hidden;
 }
@@ -1905,22 +1906,25 @@ span a:hover, p a:hover {
     transform: translateX(0);
   }
   .mobile-nav-toggle {
-    display: block;
+    display: inline-block;
     position: absolute;
     z-index: 2000;
-    right: 1rem;
+    right: 14vw;
     background: transparent;
     background-image: url(/assets/img/icon-hamburger.svg);
     background-repeat: no-repeat;
-    width: 1.5rem;
+    width: 3rem;
     aspect-ratio: 1;
-    border: 0;
+    border: 12px solid transparent;
+    cursor: pointer;
   }
   .mobile-nav-toggle[aria-expanded=true] {
     background-image: url(/assets/img/icon-close.svg);
   }
   .menu-wp-btn {
-    right: 3rem;
+    display: inline-block;
+    position: relative;
+    padding-inline: 0;
   }
 }
 @media (min-width: 50em) {
@@ -2047,11 +2051,13 @@ span a:hover, p a:hover {
 }
 
 .img-fit-cover {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .img-object-position-top {
-  object-position: top;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .overflow-hidden {
@@ -2257,16 +2263,18 @@ span a:hover, p a:hover {
   }
 }
 
-.offset-line-border {
-  outline-offset: 12px;
+.offset-line-dark {
+  outline-color: hsl(var(--dark)/0.5);
+  outline-offset: 10px;
+  outline-style: solid;
+  outline-width: 1px;
 }
 
-.border-dark {
-  outline: 1px solid hsl(var(--dark)/0.5);
-}
-
-.border-light {
-  outline: 1px solid hsl(var(--primary)/0.5);
+.offset-line-light {
+  outline-color: hsl(var(--primary)/0.5);
+  outline-style: solid;
+  outline-offset: 10px;
+  outline-width: 1px;
 }
 
 .img-circle {
@@ -2407,6 +2415,12 @@ span a:hover, p a:hover {
   flex-direction: column;
   padding: 1rem;
 }
+.footer-info__item a {
+  transition: 0.3s ease-in-out;
+}
+.footer-info__item a:hover {
+  color: hsl(var(--accent-yellow));
+}
 @media (min-width: 35em) {
   .footer-info__item {
     width: 30%;
@@ -2489,7 +2503,7 @@ span a:hover, p a:hover {
 }
 .accordion button[aria-expanded=true] + .accordion-content {
   opacity: 1;
-  max-height: 9em;
+  max-height: 14em;
   transition: all 200ms linear;
   will-change: opacity, max-height;
 }
@@ -2506,8 +2520,27 @@ span a:hover, p a:hover {
   margin: 2em 0;
 }
 
+.video-card-mb {
+  margin-bottom: 8rem;
+}
+@media (min-width: 45em) {
+  .video-card-mb {
+    margin-bottom: 5rem;
+  }
+}
+
+.video-card-left-mt {
+  margin-top: 0;
+}
+@media (min-width: 45em) {
+  .video-card-left-mt {
+    margin-top: 10rem;
+  }
+}
+
 .video-card p {
   line-height: 1.2;
+  padding: 0 3rem;
 }
 
 .gmap {

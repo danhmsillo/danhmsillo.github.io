@@ -547,6 +547,8 @@ span,p{
 
 
 @media (max-width: 50em){ //mobile
+  
+
   .primary-navigation{
     list-style: none;
     flex-direction: column;
@@ -564,18 +566,22 @@ span,p{
   }
 
   .mobile-nav-toggle {
-    display: block;
+    display: inline-block;
     position: absolute;
     z-index: 2000;
-    right: 1rem;
+    right: 14vw;
     //top: 2rem;
     background: transparent;
     background-image: url(/assets/img/icon-hamburger.svg);
     background-repeat: no-repeat;
-    width: 1.5rem;
+    width: 3rem;
     aspect-ratio: 1;
-    border: 0;
+    border: 12px solid transparent;
+    //margin: 2rem;
+    //padding: 2rem;
     //z-index: 3000;
+    //margin: 2rem;
+    cursor: pointer;
   }
 
   .mobile-nav-toggle[aria-expanded="true"]{
@@ -585,7 +591,10 @@ span,p{
   .menu-wp-btn{
     //position: absolute;
     //padding-inline: clamp(1rem,3vw,3rem);
-    right: 3rem;
+    //right: 3rem;
+    display: inline-block;
+    position: relative;
+    padding-inline:0
   }
 }
 
@@ -600,15 +609,15 @@ span,p{
   }
 }
 
-  @media (min-width: 60em){
-    .header{
-      height: 90px;
-    }
-
-    .primary-navigation{
-      padding-inline: 5rem;
-    }
+@media (min-width: 60em){
+  .header{
+    height: 90px;
   }
+
+  .primary-navigation{
+    padding-inline: 5rem;
+  }
+}
 
 
   
@@ -1036,22 +1045,27 @@ span,p{
 
 }
 
-.offset-line-border{
-  outline-offset: 12px;
+
+
+.offset-line-dark{
+  outline-color: hsl(var(--dark)/0.5);
+  outline-offset: 10px;
+  outline-style: solid;
+  outline-width: 1px;
 }
 
-.border-dark{
-  outline: 1px solid hsl(var(--dark)/0.5);
-}
-
-.border-light{
-  outline: 1px solid hsl(var(--primary)/0.5);
+.offset-line-light{
+  outline-color: hsl(var(--primary)/0.5);
+  outline-style: solid;
+  outline-offset: 10px;
+  outline-width: 1px;
 }
 
 
 .img-circle{
   aspect-ratio: 1;
   border-radius: 50%;
+  
 }
 
 .img-oval{
@@ -1195,10 +1209,15 @@ span,p{
     align-items: center;
     flex-direction: column;
     padding: 1rem;
+    a{
+      transition: $transition;
+      &:hover{
+        color: hsl(var(--accent-yellow));
+      }
+    }
     
     @media (min-width: 35em){
       width: 30%;
-
     }
 
     img{
@@ -1295,7 +1314,7 @@ span,p{
     }
     + .accordion-content {
       opacity: 1;
-      max-height: 9em;
+      max-height: 14em;
       transition: all 200ms linear;
       will-change: opacity, max-height;
     }
@@ -1316,9 +1335,27 @@ span,p{
 // ---------------------------------------------
 // Reseñas
 // ---------------------------------------------
+.video-card-mb{
+  margin-bottom: 8rem;
+
+  @media (min-width: 45em){
+    margin-bottom: 5rem;
+  }
+}
+
+.video-card-left-mt{
+  margin-top: 0;
+
+  @media (min-width: 45em){
+    margin-top: 10rem;
+  }
+}
+
+
 .video-card{
   p{
     line-height: 1.2;
+    padding: 0 3rem;
   }
 }
 
