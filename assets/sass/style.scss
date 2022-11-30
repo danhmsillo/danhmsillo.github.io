@@ -685,7 +685,7 @@ span,p{
     background-image: linear-gradient(
       rgba(46, 56, 49, .6),
       rgba(46, 56, 49, .2)),
-      url(/assets/img/index/bg-hero-desktop.jpg) 50% / cover fixed;
+      url(/assets/img/index/bg-hero-desktop.jpg) 50% / cover ;
       height: 100%;
     }
   }
@@ -697,7 +697,7 @@ span,p{
     background-image: linear-gradient(
       rgba(46, 56, 49, .6),
       rgba(46, 56, 49, .2)),
-      url(/assets/img/index/bg-hero-desktop.jpg) 50% / cover fixed;
+      url(/assets/img/index/bg-hero-desktop.jpg) 50% / cover ;
       height: 100%;
     }
   }
@@ -1124,11 +1124,24 @@ span,p{
   //flex: 0 0 100%; 
   //max-width: 280px;
   min-width: 200px;
+  //overflow: hidden;
+  position: relative;
+  // &::after{
+  //   content: "";
+  //   position: absolute;
+  //   border: 1px solid red;
+  //   top: 20px;
+  //   left: 20px;
+  //   bottom: 20px;
+  //   right: 20px;
+  //   border-radius: 90%;
+  //   //aspect-ratio: 1/0.5;
+  //   //aspect-ratio: 0.5;
+  // }
   span{
     font-size: 1.4rem;
     line-height: 1;
     margin-bottom: 1rem;
-
   }
 
   @media (min-width: 35em){
@@ -1145,6 +1158,64 @@ span,p{
     //width: 22%;
     width: clamp(22%, 33vw + 1rem, 250px);
     aspect-ratio: 1/1.3;
+  }
+}
+
+.round{
+  border-radius: 100%;
+  position: relative;
+  &_dark{
+    &::after{
+      content: "";
+      position: absolute;
+      border: 1px solid hsl(var(--dark)/0.5);
+      top: -12px;
+      left: -12px;
+      bottom: -12px;
+      right: -12px;
+      border-radius: 100%;
+    }
+  }
+  &_light{
+    &::after{
+      content: "";
+      position: absolute;
+      border: 1px solid hsl(var(--primary)/0.5);
+      top: -12px;
+      left: -12px;
+      bottom: -12px;
+      right: -12px;
+      border-radius: 100%;
+    }
+  } 
+ 
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.round2{
+  //border-radius: 100%;
+  //overflow: hidden;
+  position: relative;
+  &::after{
+  content: "";
+    position: absolute;
+    border: 1px solid blue;
+    top: -12px;
+    left: -12px;
+    bottom: -12px;
+    right: -12px;
+    //border-radius: 100%;
+    //transform: translate3d(30px, 5px, 0);
+    border-radius: 300px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
