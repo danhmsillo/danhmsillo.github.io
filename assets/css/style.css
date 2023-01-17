@@ -1547,6 +1547,10 @@ a, a:visited, a:active {
   margin-bottom: 20rem;
 }
 
+.mt1 {
+  margin-top: 1rem;
+}
+
 .mt5 {
   margin-bottom: 5rem;
 }
@@ -1600,7 +1604,7 @@ a, a:visited, a:active {
   :root {
     --fs-800: 4.625rem;
     --fs-799: 3rem;
-    --fs-750: 3rem;
+    --fs-750: 2.5rem;
     --fs-700: 2.3rem;
     --fs-650: 1.2rem;
     --fs-600: 1.63rem;
@@ -1613,6 +1617,7 @@ a, a:visited, a:active {
 @media (min-width: 55em) {
   :root {
     --fs-799: 4rem;
+    --fs-750: 2.7rem;
   }
 }
 @font-face {
@@ -2081,6 +2086,7 @@ span a:hover, p a:hover {
 .card-wrapper {
   background-color: white;
   position: relative;
+  min-height: 25rem;
   margin-bottom: 1.6rem;
 }
 .card-wrapper .date {
@@ -2102,11 +2108,13 @@ span a:hover, p a:hover {
 @media (min-width: 45em) {
   .card-wrapper {
     width: 48.5%;
+    min-height: 28rem;
   }
 }
-@media (min-width: 62em) {
+@media (min-width: 72em) {
   .card-wrapper {
     width: 32%;
+    min-height: 28rem;
   }
 }
 
@@ -2130,7 +2138,7 @@ span a:hover, p a:hover {
 }
 .card__image {
   border-radius: 3px;
-  flex: 0 0 190px;
+  flex: 0 0 140px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

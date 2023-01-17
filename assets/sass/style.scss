@@ -214,12 +214,9 @@ $transition: 0.3s ease-in-out;
   margin-bottom: 20rem;
 }
 
-.mt5{
-  margin-bottom: 5rem;
-}
-.m10{
-  margin-top: 10rem;
-}
+.mt1{margin-top: 1rem;}
+.mt5{margin-bottom: 5rem;}
+.m10{margin-top: 10rem;}
 
 //Padding Bottom
 .pb16{
@@ -284,7 +281,7 @@ $transition: 0.3s ease-in-out;
     //--fs-900: 6.25rem; //100 display1
     --fs-800: 4.625rem; //74 headline2
     --fs-799: 3rem; //74 headline2
-    --fs-750: 3rem; //CLASS CARD TITLE
+    --fs-750: 2.5rem; //CLASS CARD TITLE
     --fs-700: 2.3rem; // special paragraph
     --fs-650: 1.2rem; //CLASS CARD TITLE
     --fs-600: 1.63rem;//30 Big Body
@@ -298,6 +295,7 @@ $transition: 0.3s ease-in-out;
 @media (min-width: 55em){ //extra large screen size
   :root{
     --fs-799: 4rem; //74 headline2
+    --fs-750: 2.7rem; //CLASS CARD TITLE
   }
 }
 
@@ -833,6 +831,7 @@ span,p{
 .card-wrapper{
   background-color: white;
   position: relative;
+  min-height: 25rem;
   //margin: 1rem;
   margin-bottom: 1.6rem;
   .date{
@@ -858,10 +857,14 @@ span,p{
   // }
   @media (min-width: 45em){
     width: 48.5%;
+    min-height: 28rem;
+  
   }
   
-  @media (min-width: 62em){
+  @media (min-width: 72em){
     width: 32%;
+    min-height: 28rem;
+    
   }
 }
 
@@ -885,7 +888,7 @@ span,p{
   }
   &__image{
     border-radius: 3px;
-    flex: 0 0 190px;
+    flex: 0 0 140px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
