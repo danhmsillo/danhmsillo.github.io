@@ -1,0 +1,5 @@
+
+User-agent:*
+Sitemap:http://solinda.com.mx/sitemap.xml
+Disallow: /cgi-bin/
+Disallow: /quform/
